@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1230.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.splashSampleController">
+   <children>
+      <ImageView fx:id="splashView" fitHeight="685.0" fitWidth="1231.0" pickOnBounds="true" />
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutX="39.0" layoutY="386.0" prefHeight="250.0" prefWidth="250.0">
+               <children>
+                  <ImageView fx:id="rotate" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" />
+                  <Text fill="YELLOW" layoutX="16.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G19 MANAGEMENT SYSTEMS SERIES">
+                     <font>
+                        <Font name="David Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Text layoutX="289.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BAGAMOYO DISTRICT COUNCIL" wrappingWidth="766.578125">
+               <font>
+                  <Font name="Engravers MT" size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="1056.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="version 1.0.0">
+               <font>
+                  <Font name="Elephant Italic" size="12.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="udsmLogo" fitHeight="150.0" fitWidth="125.0" layoutX="106.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="119.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administer Logo:">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="bagaLogo" fitHeight="115.0" fitWidth="125.0" layoutX="1019.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="1037.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client Logo:">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Text>
+            <JFXProgressBar layoutX="412.0" layoutY="579.0" prefHeight="17.0" prefWidth="406.0" />
+            <Text layoutX="584.0" layoutY="564.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please wait .....">
+               <font>
+                  <Font name="Eras Demi ITC" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

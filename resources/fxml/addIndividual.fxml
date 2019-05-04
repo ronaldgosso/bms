@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.addIndividualController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1027.0" styleClass="topPane" stylesheets="@application.css">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="650.0" prefWidth="1000.0" styleClass="cardPane" stylesheets="@application.css">
+               <children>
+                  <Text layoutX="417.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD INDIVIDUAL" wrappingWidth="166.00001373887062">
+                     <font>
+                        <Font name="Aparajita" size="24.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane fx:id="entryPane" layoutX="14.0" layoutY="49.0" prefHeight="575.0" prefWidth="427.0">
+                     <content>
+                        <AnchorPane prefHeight="650.0" prefWidth="425.0">
+                           <children>
+                              <JFXTextField fx:id="fName" layoutX="134.0" layoutY="10.0" prefHeight="25.0" prefWidth="186.0" />
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jina La Kwanza:" />
+                              <Text layoutX="14.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jina La Kati :" />
+                              <JFXTextField fx:id="mName" layoutX="134.0" layoutY="42.0" prefHeight="25.0" prefWidth="185.0" />
+                              <Text layoutX="14.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jina La Mwisho :" />
+                              <JFXTextField fx:id="lName" layoutX="134.0" layoutY="73.0" prefHeight="25.0" prefWidth="184.0" />
+                              <Text layoutX="14.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jinsia :" />
+                              <JFXTextField fx:id="sex" layoutX="134.0" layoutY="103.0" prefHeight="25.0" prefWidth="184.0" />
+                              <Text layoutX="14.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHEO CHA SASA :" />
+                              <JFXTextField fx:id="cheo" layoutX="134.0" layoutY="133.0" prefHeight="25.0" prefWidth="187.0" />
+                              <Text layoutX="14.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngazi Ya Mshahara:" />
+                              <JFXTextField fx:id="mshahara" layoutX="134.0" layoutY="165.0" prefHeight="25.0" prefWidth="186.0" />
+                              <Text layoutX="14.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHECK Number:" />
+                              <JFXTextField fx:id="check" layoutX="134.0" layoutY="193.0" prefHeight="25.0" prefWidth="186.0" />
+                              <Text layoutX="14.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T.S.D Number:" />
+                              <JFXTextField fx:id="tsd" layoutX="134.0" layoutY="222.0" prefHeight="25.0" prefWidth="186.0" />
+                              <Text layoutX="14.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarehe Ya Kuzaliwa:" />
+                              <JFXDatePicker fx:id="kuzaliwa" layoutX="134.0" layoutY="250.0" prefHeight="25.0" prefWidth="194.0" />
+                              <Label layoutX="14.0" layoutY="278.0" text="Tarehe Ya Ajira:" />
+                              <JFXDatePicker fx:id="ajira" layoutX="134.0" layoutY="274.0" prefHeight="25.0" prefWidth="194.0" />
+                              <Label layoutX="14.0" layoutY="306.0" text="Tarehe Ya Kuthibitishwa:" />
+                              <JFXDatePicker fx:id="thibitishwa" layoutX="146.0" layoutY="302.0" prefHeight="25.0" prefWidth="182.0" />
+                              <Label layoutX="14.0" layoutY="334.0" text="Tarehe Ya Daraja La Sasa:" />
+                              <JFXDatePicker fx:id="daraja" layoutX="152.0" layoutY="330.0" prefHeight="25.0" prefWidth="176.0" />
+                              <Label layoutX="14.0" layoutY="363.0" text="Kiwango Cha Elimu :" />
+                              <JFXTextField fx:id="elimu" layoutX="134.0" layoutY="359.0" prefHeight="25.0" prefWidth="187.0" />
+                              <Label layoutX="14.0" layoutY="392.0" text="Chuo Alichosoma :" />
+                              <JFXTextField fx:id="chuo" layoutX="134.0" layoutY="388.0" prefHeight="25.0" prefWidth="187.0" />
+                              <Label layoutX="14.0" layoutY="421.0" text="Mwaka Aliomaliza :" />
+                              <JFXTextField fx:id="aliomaliza" layoutX="134.0" layoutY="417.0" prefHeight="25.0" prefWidth="187.0" />
+                              <Text layoutX="14.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kituo Cha Sasa Cha Kazi:" />
+                              <JFXTextField fx:id="sasaKazi" layoutX="146.0" layoutY="445.0" prefHeight="25.0" prefWidth="175.0" />
+                              <Text layoutX="14.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kituo Cha Awali Cha Kazi:" />
+                              <JFXTextField fx:id="awaliKazi" layoutX="152.0" layoutY="473.0" prefHeight="25.0" prefWidth="169.0" />
+                              <Text layoutX="14.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dini :" />
+                              <JFXTextField fx:id="dini" layoutX="134.0" layoutY="502.0" prefHeight="25.0" prefWidth="187.0" />
+                              <Text layoutX="14.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mahali Alipozaliwa :" />
+                              <JFXTextField fx:id="alipozaliwa" layoutX="134.0" layoutY="530.0" prefHeight="25.0" prefWidth="187.0" />
+                              <Text layoutX="13.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namba Ya Simu" />
+                              <JFXTextField fx:id="number" layoutX="134.0" layoutY="561.0" prefHeight="25.0" prefWidth="188.0" />
+                              <Text layoutX="13.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Somo La Kwanza " />
+                              <JFXTextField fx:id="somo1" layoutX="134.0" layoutY="589.0" prefHeight="25.0" prefWidth="186.0" />
+                              <Text layoutX="13.0" layoutY="635.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Somo La Pili :" />
+                              <JFXTextField fx:id="somo2" layoutX="131.0" layoutY="610.0" prefHeight="25.0" prefWidth="190.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane layoutX="469.0" layoutY="209.0" styleClass="supervisorTransparent" stylesheets="@application.css">
+                     <children>
+                        <Text layoutX="221.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OPERATIONS">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="31.0" prefHeight="9.0" prefWidth="513.0" />
+                        <Separator layoutX="266.0" layoutY="36.0" orientation="VERTICAL" prefHeight="376.0" prefWidth="4.0" />
+                        <JFXButton layoutX="79.0" layoutY="81.0" onAction="#filter" prefHeight="25.0" prefWidth="117.0" text="FILTER" />
+                        <JFXButton layoutX="79.0" layoutY="148.0" onAction="#enrollIndividuals" prefHeight="25.0" prefWidth="117.0" text="ENROLL" />
+                        <JFXButton buttonType="RAISED" layoutX="37.0" layoutY="367.0" onAction="#addUser" prefHeight="25.0" prefWidth="202.0" ripplerFill="#00fce2" text="ADD INDIVIDUAL" />
+                        <JFXButton buttonType="RAISED" layoutX="381.0" layoutY="331.0" onAction="#exit" prefHeight="57.0" prefWidth="57.0" ripplerFill="WHITE" styleClass="offButton" stylesheets="@application.css" text="EXIT" textFill="WHITE">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <Text layoutX="284.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE :" />
+                        <Label fx:id="date" layoutX="339.0" layoutY="286.0" prefHeight="33.0" prefWidth="162.0" />
+                        <JFXButton layoutX="79.0" layoutY="224.0" onAction="#entryStatus" text="VIEW CURRENT ENTRY" />
+                        <JFXToggleButton fx:id="hidePane" layoutX="284.0" layoutY="66.0" onAction="#hideEntryPane" text="HIDE ENTRY PANE" toggleColor="GREEN" unToggleColor="WHITE" unToggleLineColor="AQUA" />
+                        <JFXToggleButton fx:id="timeToggle" layoutX="284.0" layoutY="133.0" onAction="#timeResponse" prefHeight="56.0" prefWidth="211.0" text="ACTIVATE TIME RESPONSE" unToggleLineColor="AQUA" />
+                        <JFXToggleButton fx:id="showingDate" layoutX="78.0" layoutY="274.0" onAction="#showDate" text="SHOW DATE" toggleColor="RED" unToggleColor="WHITE" unToggleLineColor="AQUA" />
+                     </children>
+                  </AnchorPane>
+                  <Text layoutX="469.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KATA :" />
+                  <TextField fx:id="kata" alignment="CENTER" layoutX="513.0" layoutY="146.0" prefHeight="25.0" prefWidth="202.0" promptText="Optional " />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

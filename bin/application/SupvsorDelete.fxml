@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="291.0" prefWidth="546.0" styleClass="homeBack" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SupvsorDeleteController">
+   <children>
+      <AnchorPane layoutX="34.0" layoutY="39.0" prefHeight="217.0" prefWidth="482.0" styleClass="root" stylesheets="@application.css">
+         <children>
+            <Text layoutX="146.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELETE SUPERVISOR" textAlignment="CENTER">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="supervisor" alignment="CENTER" layoutX="167.0" layoutY="73.0" prefHeight="25.0" prefWidth="189.0" promptText="Supervisor Username">
+               <tooltip>
+                  <Tooltip text="Provide the username and not the name of the supervisor" />
+               </tooltip>
+            </TextField>
+            <Label layoutX="38.0" layoutY="77.0" text="Supervisor`s Name :" />
+            <Button layoutX="215.0" layoutY="123.0" mnemonicParsing="false" onAction="#delete" styleClass="deleteButton" stylesheets="@application.css" text="DELETE" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Button>
+            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="178.0" onAction="#refresh" prefHeight="25.0" prefWidth="97.0" ripplerFill="GREEN" text="REFRESH" textFill="GREEN" />
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

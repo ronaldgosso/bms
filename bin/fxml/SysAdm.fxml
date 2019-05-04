@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="498.0" prefWidth="836.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <AnchorPane fx:id="rootPane" layoutY="467.0" prefHeight="31.0" prefWidth="836.0" styleClass="topPane" stylesheets="@application.css">
+         <children>
+            <FontAwesomeIconView fill="#fffdfd" layoutX="7.0" layoutY="21.0" />
+            <Label layoutX="22.0" layoutY="8.0" prefHeight="17.0" prefWidth="134.0" styleClass="bottom" stylesheets="@application.css" text="\@2017 Gosso Ronald_UDSM" textFill="#fffbfb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <ImageView fx:id="image" fitHeight="469.0" fitWidth="836.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/img/face.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="524.0" layoutY="45.0" prefHeight="375.0" prefWidth="280.0" styleClass="dev" stylesheets="@application.css">
+         <children>
+            <ImageView fitHeight="112.0" fitWidth="109.0" layoutX="86.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/img/settings.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="userManager" layoutX="66.0" layoutY="188.0" promptText="Username">
+               <tooltip>
+                  <Tooltip text="Make sure you are Registered by the Developer or Launch the Synchronizer to get the Log In Password and Username." />
+               </tooltip></TextField>
+            <PasswordField fx:id="passManager" layoutX="66.0" layoutY="245.0" promptText="Password" />
+            <Button layoutX="112.0" layoutY="303.0" mnemonicParsing="false" onAction="#sysAdminComs" styleClass="butGlow" stylesheets="@application.css" text="LOG IN">
+               <font>
+                  <Font name="Eras Demi ITC" size="12.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="14.0" layoutY="14.0" text="Welcome" textFill="#fafafa">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="userlabel" layoutX="81.0" layoutY="14.0" prefHeight="17.0" prefWidth="155.0" text="Admin" textFill="#d3db0d">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="278.0" layoutY="7.0" prefHeight="31.0" prefWidth="280.0" text="SYSTEM ADMINISTRATOR PANEL">
+         <font>
+            <Font name="Bernard MT Condensed" size="24.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.45" centerY="0.2523809523809524" radius="0.5">
+               <stops>
+                  <Stop color="#3ec6e8" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <AnchorPane layoutX="41.0" layoutY="45.0" prefHeight="375.0" prefWidth="280.0" styleClass="cardPane" stylesheets="@application.css">
+         <children>
+            <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="78.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/img/Qr.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="74.0" layoutY="188.0" mnemonicParsing="false" onAction="#qrLauncher" styleClass="bottom" stylesheets="@application.css" text="Launch Synchronizer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <JFXTextArea editable="false" layoutX="26.0" layoutY="245.0" prefHeight="82.0" prefWidth="228.0" text="Hint:                                                                      Make sure you have the QR Code Scanner installed in your phone to Launch and LOG IN as the System Administrator." />
+            <ImageView fitHeight="63.0" fitWidth="58.0" layoutX="110.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/img/baga.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="407.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+   </children>
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="back" />
+   </styleClass>
+</AnchorPane>

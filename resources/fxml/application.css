@@ -1,0 +1,84 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.cardPane{
+	-fx-background-color:white ;
+	-fx-background-radius:8px;
+}
+.topPane{
+	-fx-background-color:blue;
+}
+.status{
+	-fx-background-color:rgb(192,192,192);
+	-fx-opacity:0.5;
+	-fx-background-radius:8px;
+}
+.dev{
+	-fx-background-color:rgb(255,255,255);
+	-fx-background-radius:9px;
+}
+.root{
+	-fx-background-radius:8px;
+}
+.buttonback{
+	-fx-background-image:url("call.png"); 
+}
+.logout{
+	-fx-background-color:rgb(255,128,128);
+	-fx-background-radius:5px;
+}
+.but{
+	-fx-background-color:rgb(199,190,186);
+	-fx-background-radius:5px;
+
+}
+.homeBack{
+	-fx-background-color:rgb(0,0,255);	
+}
+.homeGadget{
+	-fx-background-color:yellow;
+	-fx-background-radius:8px;
+}
+.bottom{
+	-fx-background-color:green;
+	-fx-background-radius:8px;
+}
+.homescrollPane{
+	-fx-background-color:black;
+-fx-background-radius:8px;
+}
+.butGlow{
+    -fx-effect: dropshadow(one-pass-box , rgba(255,255,255,0.5) , 0, 0.0 , 0 , 1);
+	-fx-background-radius:8px;
+	}
+	.silver{
+		-fx-background-radius:8px;
+		-fx-background-color:rgb(192,192,192);
+	}
+.deleteButton{
+	-fx-background-radius:8px;
+		-fx-background-color:red;
+}
+.wordBack{
+	-fx-background-radius:8px;
+	-fx-opacity:0.8;
+	-fx-background-color:aqua;
+	
+}
+.offButton{
+	-fx-background-radius:9000px;
+		-fx-background-color:red;
+}	
+.supervisorTransparent{
+	 -fx-border-radius: 10px;
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-border-color:rgb(0,0,0);
+    
+}
+.homeup{
+    -fx-background-image: url("img/alert.jpg");
+    -fx-background-repeat: stretch;   
+   
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="22.0" layoutY="14.0" prefHeight="407.0" prefWidth="407.0" styleClass="cardPane" stylesheets="@application.css">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <Text layoutX="152.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTACTS" textAlignment="CENTER">
+               <font>
+                  <Font name="Calisto MT" size="18.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="22.0" layoutY="44.0" prefHeight="125.0" prefWidth="375.0" styleClass="cardPane" stylesheets="@application.css">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <Separator layoutY="24.0" prefHeight="7.0" prefWidth="375.0" />
+                  <Label layoutX="14.0" layoutY="6.0" text="Administration :" />
+                  <JFXTextArea editable="false" layoutY="28.0" prefHeight="81.0" prefWidth="375.0" />
+                  <Label layoutX="14.0" layoutY="31.0" text="Department Of Computer Science And Engineering" />
+                  <Label layoutX="14.0" layoutY="48.0" text="University Of Dar Es Salaam" />
+                  <Label layoutX="14.0" layoutY="63.0" text="PT Co-Ordinator" />
+                  <Label layoutX="14.0" layoutY="80.0" text="+255 768 812 481" />
+                  <Label layoutX="14.0" layoutY="97.0" text="https://www.udsm.ac.tz" textFill="BLUE" />
+                  <ImageView fitHeight="66.0" fitWidth="63.0" layoutX="298.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/img/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="22.0" layoutY="180.0" prefHeight="151.0" prefWidth="375.0" styleClass="cardPane" stylesheets="@application.css">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <Separator layoutY="24.0" prefHeight="7.0" prefWidth="375.0" />
+                  <JFXTextArea editable="false" layoutX="4.0" layoutY="31.0" prefHeight="100.0" prefWidth="368.0" />
+                  <Label layoutX="14.0" layoutY="6.0" text="Software Developer :" />
+                  <Label layoutX="14.0" layoutY="31.0" text="Gosso Ronald" />
+                  <Label layoutX="14.0" layoutY="48.0" text="2015-04-02580 (Student)" />
+                  <Label layoutX="14.0" layoutY="63.0" text="+255 763 930 052 (Text Only)" />
+                  <Label layoutX="14.0" layoutY="80.0" text="+1 518-840-6342 (WhatsApp + Viber)" />
+                  <Label layoutX="14.0" layoutY="97.0" text="ronaldgosso@gmail.com" />
+                  <Label layoutX="14.0" layoutY="116.0" text="http://birdcom.net" textFill="BLUE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

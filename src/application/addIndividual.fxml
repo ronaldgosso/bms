@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.addIndividualController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1027.0" styleClass="topPane" stylesheets="@application.css">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="650.0" prefWidth="1000.0" styleClass="cardPane" stylesheets="@application.css">
+               <children>
+                  <Text layoutX="417.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD INDIVIDUAL" wrappingWidth="166.00001373887062">
+                     <font>
+                        <Font name="Aparajita" size="24.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="469.0" layoutY="209.0" styleClass="supervisorTransparent" stylesheets="@application.css">
+                     <children>
+                        <Text layoutX="221.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OPERATIONS">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="31.0" prefHeight="9.0" prefWidth="513.0" />
+                        <Separator layoutX="266.0" layoutY="36.0" orientation="VERTICAL" prefHeight="376.0" prefWidth="4.0" />
+                        <JFXButton layoutX="90.0" layoutY="149.0" onAction="#filter" prefHeight="25.0" prefWidth="117.0" text="FILTER" />
+                        <JFXButton layoutX="90.0" layoutY="225.0" onAction="#enrollIndividuals" prefHeight="25.0" prefWidth="117.0" text="ENROLL" />
+                        <JFXButton buttonType="RAISED" layoutX="381.0" layoutY="331.0" onAction="#exit" prefHeight="57.0" prefWidth="57.0" ripplerFill="WHITE" styleClass="offButton" stylesheets="@application.css" text="EXIT" textFill="WHITE">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <Text layoutX="284.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE :" />
+                        <Label fx:id="date" layoutX="339.0" layoutY="286.0" prefHeight="33.0" prefWidth="162.0" />
+                        <JFXButton layoutX="90.0" layoutY="282.0" onAction="#entryStatus" text="VIEW CURRENT ENTRY" />
+                        <JFXToggleButton fx:id="hidePane" layoutX="284.0" layoutY="66.0" onAction="#hideEntryPane" text="HIDE ENTRY PANE" toggleColor="GREEN" unToggleColor="WHITE" unToggleLineColor="AQUA" />
+                        <JFXToggleButton fx:id="timeToggle" layoutX="284.0" layoutY="133.0" onAction="#timeResponse" prefHeight="56.0" prefWidth="211.0" text="ACTIVATE TIME RESPONSE" unToggleLineColor="AQUA" />
+                        <JFXToggleButton fx:id="showingDate" layoutX="284.0" layoutY="209.0" onAction="#showDate" text="SHOW DATE" toggleColor="RED" unToggleColor="WHITE" unToggleLineColor="AQUA" />
+                        <JFXButton layoutX="92.0" layoutY="347.0" onAction="#email" prefHeight="25.0" prefWidth="135.0" text="EMAIL SERVICES" />
+                        <JFXButton buttonType="RAISED" layoutX="47.0" layoutY="82.0" onAction="#addUser" prefHeight="25.0" prefWidth="202.0" ripplerFill="RED" text="ADD INDIVIDUAL" />
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane fx:id="entryPane" layoutX="14.0" layoutY="97.0" prefHeight="526.0" prefWidth="427.0">
+                     <content>
+                        <AnchorPane prefHeight="700.0" prefWidth="425.0">
+                           <children>
+                              <JFXTextField fx:id="fName" focusColor="RED" layoutX="134.0" layoutY="10.0" prefHeight="25.0" prefWidth="186.0" unFocusColor="RED" />
+                              <Text layoutX="11.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jina La Kwanza:" />
+                              <Text layoutX="14.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jina La Kati :" />
+                              <JFXTextField fx:id="mName" focusColor="RED" layoutX="134.0" layoutY="42.0" prefHeight="25.0" prefWidth="185.0" unFocusColor="RED" />
+                              <Text layoutX="14.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jina La Mwisho :" />
+                              <JFXTextField fx:id="lName" focusColor="RED" layoutX="134.0" layoutY="73.0" prefHeight="25.0" prefWidth="184.0" unFocusColor="RED" />
+                              <Text layoutX="14.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jinsia :" />
+                              <JFXTextField fx:id="sex" focusColor="RED" layoutX="134.0" layoutY="103.0" prefHeight="25.0" prefWidth="184.0" unFocusColor="RED" />
+                              <Text layoutX="14.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHEO CHA SASA :" />
+                              <JFXTextField fx:id="cheo" focusColor="RED" layoutX="134.0" layoutY="133.0" prefHeight="25.0" prefWidth="187.0" unFocusColor="RED" />
+                              <Text layoutX="14.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngazi Ya Mshahara:" />
+                              <JFXTextField fx:id="mshahara" layoutX="134.0" layoutY="165.0" prefHeight="25.0" prefWidth="186.0" />
+                              <Text layoutX="14.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHECK Number:" />
+                              <JFXTextField fx:id="check" focusColor="RED" layoutX="134.0" layoutY="193.0" prefHeight="25.0" prefWidth="186.0" unFocusColor="RED" />
+                              <Text layoutX="14.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T.S.D Number:" />
+                              <JFXTextField fx:id="tsd" focusColor="RED" layoutX="134.0" layoutY="222.0" prefHeight="25.0" prefWidth="186.0" unFocusColor="RED" />
+                              <Text layoutX="14.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarehe Ya Kuzaliwa:" />
+                              <JFXDatePicker fx:id="kuzaliwa" defaultColor="RED" editable="false" layoutX="134.0" layoutY="250.0" prefHeight="25.0" prefWidth="194.0" showWeekNumbers="true" />
+                              <Label layoutX="14.0" layoutY="278.0" text="Tarehe Ya Ajira:" />
+                              <JFXDatePicker fx:id="ajira" defaultColor="RED" layoutX="134.0" layoutY="274.0" prefHeight="25.0" prefWidth="194.0" />
+                              <Label layoutX="14.0" layoutY="306.0" text="Tarehe Ya Kuthibitishwa:" />
+                              <JFXDatePicker fx:id="thibitishwa" layoutX="146.0" layoutY="302.0" prefHeight="25.0" prefWidth="182.0" />
+                              <Label layoutX="14.0" layoutY="334.0" text="Tarehe Ya Daraja La Sasa:" />
+                              <JFXDatePicker fx:id="daraja" defaultColor="RED" layoutX="152.0" layoutY="330.0" prefHeight="25.0" prefWidth="176.0" />
+                              <Label layoutX="14.0" layoutY="363.0" text="Kiwango Cha Elimu :" />
+                              <JFXTextField fx:id="elimu" focusColor="BLUE" layoutX="134.0" layoutY="359.0" prefHeight="25.0" prefWidth="187.0" unFocusColor="BLACK" />
+                              <Label layoutX="14.0" layoutY="392.0" text="Chuo Alichosoma :" />
+                              <JFXTextField fx:id="chuo" layoutX="134.0" layoutY="388.0" prefHeight="25.0" prefWidth="187.0" />
+                              <Label layoutX="14.0" layoutY="421.0" text="Mwaka Aliomaliza :" />
+                              <JFXTextField fx:id="aliomaliza" layoutX="134.0" layoutY="417.0" prefHeight="25.0" prefWidth="187.0" />
+                              <Text layoutX="14.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kituo Cha Sasa Cha Kazi:" />
+                              <JFXTextField fx:id="sasaKazi" focusColor="RED" layoutX="146.0" layoutY="445.0" prefHeight="25.0" prefWidth="175.0" unFocusColor="RED" />
+                              <Text layoutX="14.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kituo Cha Awali Cha Kazi:" />
+                              <JFXTextField fx:id="awaliKazi" layoutX="152.0" layoutY="473.0" prefHeight="25.0" prefWidth="169.0" />
+                              <Text layoutX="14.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dini :" />
+                              <JFXTextField fx:id="dini" focusColor="BLUE" layoutX="134.0" layoutY="502.0" prefHeight="25.0" prefWidth="187.0" unFocusColor="BLACK" />
+                              <Text layoutX="14.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mahali Alipozaliwa :" />
+                              <JFXTextField fx:id="alipozaliwa" focusColor="RED" layoutX="134.0" layoutY="530.0" prefHeight="25.0" prefWidth="187.0" unFocusColor="RED" />
+                              <Text layoutX="13.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namba Ya Simu" />
+                              <JFXTextField fx:id="number" focusColor="RED" layoutX="134.0" layoutY="561.0" prefHeight="25.0" prefWidth="188.0" unFocusColor="RED" />
+                              <Text layoutX="13.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Somo La Kwanza " />
+                              <JFXTextField fx:id="somo1" layoutX="134.0" layoutY="589.0" prefHeight="25.0" prefWidth="186.0" />
+                              <Text layoutX="13.0" layoutY="635.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Somo La Pili :" />
+                              <JFXTextField fx:id="somo2" layoutX="131.0" layoutY="610.0" prefHeight="25.0" prefWidth="190.0" />
+                              <Text layoutX="17.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KATA :" wrappingWidth="47.00000047683716" />
+                              <TextField fx:id="kata" alignment="CENTER" layoutX="141.0" layoutY="645.0" prefHeight="25.0" prefWidth="184.0" stylesheets="@BasicApplication.css" />
+                              <ImageView fx:id="a" fitHeight="25.0" fitWidth="34.0" layoutX="350.0" layoutY="645.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="b" fitHeight="25.0" fitWidth="34.0" layoutX="350.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="c" fitHeight="25.0" fitWidth="34.0" layoutX="350.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="d" fitHeight="25.0" fitWidth="34.0" layoutX="347.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="e" fitHeight="25.0" fitWidth="34.0" layoutX="350.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="f" fitHeight="25.0" fitWidth="34.0" layoutX="350.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="g" fitHeight="25.0" fitWidth="34.0" layoutX="350.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="h" fitHeight="25.0" fitWidth="34.0" layoutX="347.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="i" fitHeight="25.0" fitWidth="34.0" layoutX="347.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="j" fitHeight="25.0" fitWidth="34.0" layoutX="347.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="k" fitHeight="25.0" fitWidth="34.0" layoutX="347.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="l" fitHeight="25.0" fitWidth="34.0" layoutX="350.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="m" fitHeight="25.0" fitWidth="34.0" layoutX="350.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="n" fitHeight="25.0" fitWidth="34.0" layoutX="350.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <ImageView fx:id="o" fitHeight="25.0" fitWidth="34.0" layoutX="14.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fill="RED" fontSmoothingType="LCD" layoutX="61.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MUST BE FILLED">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

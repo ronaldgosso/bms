@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="600.0" styleClass="but" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.downloadFileController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="15.0" prefHeight="462.0" prefWidth="571.0" styleClass="cardPane" stylesheets="@application.css">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <AnchorPane layoutX="33.0" layoutY="44.0" prefHeight="191.0" prefWidth="492.0" styleClass="silver" stylesheets="@application.css">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <Text layoutX="22.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Name :  " />
+                  <JFXTextField fx:id="fileName" alignment="CENTER" focusColor="#970026" labelFloat="true" layoutX="110.0" layoutY="36.0" prefHeight="25.0" prefWidth="309.0" promptText="file name" unFocusColor="#07dd00" />
+                  <Text layoutX="22.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location To Be Saved :" />
+                  <JFXTextField fx:id="location" focusColor="WHITE" labelFloat="true" layoutX="153.0" layoutY="140.0" prefHeight="25.0" prefWidth="266.0" promptText="eg: D:/Files/Downloaded" unFocusColor="#e5ff00">
+                     <font>
+                        <Font name="Bookman Old Style" size="14.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Do Not Choose C Directory For Permision Side Effects" />
+                     </tooltip>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <Text layoutX="225.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOWNLOAD A FILE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="190.0" layoutY="249.0" prefHeight="61.0" prefWidth="200.0" styleClass="silver" stylesheets="@application.css">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="18.0" onAction="#downloadFile" prefHeight="25.0" prefWidth="148.0" ripplerFill="#db0000" text="DOWNLOAD">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <JFXButton layoutX="14.0" layoutY="300.0" onAction="#exit" prefHeight="54.0" prefWidth="53.0" styleClass="offButton" stylesheets="@application.css" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextArea fx:id="feedBack" editable="false" labelFloat="true" layoutX="74.0" layoutY="320.0" prefHeight="108.0" prefWidth="464.0" promptText="COMPATIBILITY" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

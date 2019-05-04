@@ -1,0 +1,47 @@
+SERVICES:
+
+Change Password >> Ask your System Administrator to perform this for you.
+You have no rights to invoke.
+
+nChat  (Client) >> Secretarial Services Function,Chat with A person after entering His/her IP Address.
+Choose the dedicated Port declared in your Server(nchar(Server)) copy it and submit,enter your Username,and the IP 
+by which your server resides or another client [as ther is the dedicated computer sever already]...ENJOY CHATTING
+AND NOTIFYING.
+
+nChat  (Server) >> This should be started at the beginning before any other CLIENT assign it by choosing the dedicated
+PORT.Connect it to the CLIENTS by using the IP Address residing in the computer running nChat(Server),
+if in the same computer leave the field "localhost" as it is..
+
+
+FILE OPERATIONS:
+
+
+Add File   >> Add any file except EXCELL,MUSIC and IMAGE FILES file from your Computer to be viewed and Uploaded. 
+
+View File  >> Only the file uploaded will be viewed here,just upload your file and if you want to verify it just view it and it will opened
+to the system pane.
+
+Upload     >> You can upload many recommended files not more than 1.8MB to the database for later downloading (depending on the machine compatibility),
+Security and privacy is ensured.
+
+Download Files >> Download your file uploaded earlier (finding compatibility error) please contact your admin.[remember your file name from the enrolled]
+
+Enroll Files   >>  See all of the files Uploaded to help you get the name fot downloading them or assuring if they are in the system.
+
+
+Delete File    >> Find the name of the desired file and delete it from the Database. 
+
+
+INDIVIDUALS:
+
+
+Add Individual >> Add individual and make sure you dont miss any field as the file wont be submitted thus system will throw an error.
+
+Delete Individual >> Provide the name and the check number as reisttered to delete a user with the provided infos.
+
+Edit Individual >> Update individual informations.
+
+Import Ready Made Excell File >> Choose the compatible File (.xls) having all the information TRUE,and import to the database.{IF YOUR NOT SURE DO NOT SUBMIT}
+
+Email Service >> Dedicated only in sending files <attachement> make sure you upload a file to attach [NO .EXE].
+

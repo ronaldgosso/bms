@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.deleteIndividualController">
+   <children>
+      <AnchorPane layoutX="21.0" layoutY="21.0" prefHeight="275.0" prefWidth="565.0">
+         <children>
+            <Text layoutX="229.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELETE INDIVIDUAL" />
+            <JFXTextField fx:id="checkNo" alignment="CENTER" focusColor="GREEN" labelFloat="true" layoutX="198.0" layoutY="71.0" prefHeight="25.0" prefWidth="313.0" promptText="CHECK NUMBER" />
+            <Text layoutX="14.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Individual Check Number :" />
+            <Text layoutX="14.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Individual First Name :" />
+            <JFXTextField fx:id="name" alignment="CENTER" labelFloat="true" layoutX="198.0" layoutY="132.0" prefHeight="25.0" prefWidth="313.0" promptText="NAME" />
+            <JFXButton buttonType="RAISED" layoutX="207.0" layoutY="199.0" onAction="#delete" prefHeight="25.0" prefWidth="156.0" ripplerFill="WHITE" styleClass="deleteButton" stylesheets="@application.css" text="DELETE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

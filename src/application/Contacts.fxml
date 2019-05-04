@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="22.0" layoutY="14.0" prefHeight="240.0" prefWidth="407.0" styleClass="cardPane" stylesheets="@application.css">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <Text layoutX="152.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTACTS" textAlignment="CENTER">
+               <font>
+                  <Font name="Calisto MT" size="18.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="16.0" layoutY="53.0" prefHeight="151.0" prefWidth="375.0" styleClass="cardPane" stylesheets="@application.css">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <Separator layoutY="24.0" prefHeight="7.0" prefWidth="375.0" />
+                  <JFXTextArea editable="false" layoutX="4.0" layoutY="31.0" prefHeight="100.0" prefWidth="368.0" />
+                  <Label layoutX="14.0" layoutY="6.0" text="Software Developer :" />
+                  <Label layoutX="14.0" layoutY="31.0" text="Gosso Ronald" />
+                  <Label layoutX="14.0" layoutY="48.0" text="2015-04-02580 (Student)" />
+                  <Label layoutX="14.0" layoutY="63.0" text="+255 763 930 052 (Text Only)" />
+                  <Label layoutX="14.0" layoutY="80.0" text="+1 518-840-6342 (WhatsApp + Viber)" />
+                  <Label layoutX="14.0" layoutY="97.0" text="ronaldgosso@gmail.com" />
+                  <Label layoutX="14.0" layoutY="116.0" text="http://birdcom.net" textFill="BLUE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" styleClass="silver" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.supervisorHomeController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="626.0" prefWidth="976.0" styleClass="supervisorTransparent" stylesheets="@application.css">
+         <children>
+            <ImageView fx:id="backView" fitHeight="626.0" fitWidth="976.0" pickOnBounds="true" />
+            <AnchorPane layoutX="388.0" layoutY="23.0" prefHeight="37.0" prefWidth="200.0" styleClass="wordBack" stylesheets="@application.css">
+               <children>
+                  <Text layoutX="7.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUPERVISOR MAIN PANEL">
+                     <font>
+                        <Font name="Bodoni MT" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="113.0" prefHeight="465.0" prefWidth="200.0" styleClass="supervisorTransparent" stylesheets="@application.css">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <AnchorPane layoutY="14.0" prefHeight="24.0" prefWidth="207.0" styleClass="wordBack" stylesheets="@application.css">
+                     <children>
+                        <Label layoutX="74.0" layoutY="4.0" text="SERVICES" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="99.0" onAction="#chandePwd" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Change Password" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <Separator layoutX="3.0" layoutY="43.0" prefHeight="5.0" prefWidth="202.0" styleClass="supervisorTransparent" stylesheets="@application.css" />
+                  <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="140.0" onAction="#nChatClient" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="nChat (Client)" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="181.0" onAction="#nChatServer" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="nChat (Server)" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="220.0" onAction="#help" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Help" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="exit" layoutX="77.0" layoutY="373.0" onAction="#exit" prefHeight="55.0" prefWidth="54.0" styleClass="offButton" stylesheets="@application.css" text="OFF" textFill="WHITE">
+                     <font>
+                        <Font name="Britannic Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="241.0" layoutY="113.0" onDragDetected="#enrollFiles" prefHeight="465.0" prefWidth="719.0" styleClass="supervisorTransparent" stylesheets="@application.css">
+               <children>
+                  <Separator layoutX="1.0" layoutY="43.0" prefHeight="4.0" prefWidth="721.0" styleClass="supervisorTransparent" stylesheets="@application.css" />
+                  <Separator layoutX="363.0" layoutY="48.0" orientation="VERTICAL" prefHeight="415.0" prefWidth="0.0" styleClass="supervisorTransparent" stylesheets="@application.css" />
+                  <AnchorPane cache="true" layoutX="267.0" prefHeight="37.0" prefWidth="200.0" styleClass="wordBack" stylesheets="@application.css">
+                     <children>
+                        <Text layoutX="75.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TANGE" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bodoni MT" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="65.0" layoutY="48.0" prefHeight="24.0" prefWidth="202.0" styleClass="wordBack" stylesheets="@application.css">
+                     <children>
+                        <Label layoutX="50.0" layoutY="4.0" text="FILE OPERATIONS" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="467.0" layoutY="48.0" prefHeight="24.0" prefWidth="202.0" styleClass="wordBack" stylesheets="@application.css">
+                     <children>
+                        <Label layoutX="63.0" layoutY="4.0" text="INDIVIDUALS" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton fx:id="addWorker" buttonType="RAISED" layoutX="494.0" layoutY="99.0" onAction="#addIndividual" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Add Individual" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="deleteWorker" buttonType="RAISED" layoutX="494.0" layoutY="147.0" onAction="#deleteIndividual" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Delete Individual" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="editWorker" buttonType="RAISED" layoutX="494.0" layoutY="198.0" onAction="#editIndividual" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Edit Individual" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="104.0" layoutY="97.0" onAction="#addFile" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Add File" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="106.0" layoutY="356.0" onAction="#deleteFile" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Delete Files" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="104.0" layoutY="147.0" onAction="#viewFile" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="View File" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="106.0" layoutY="305.0" onAction="#enrollFiles" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Enroll Files" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="addWorker4" buttonType="RAISED" layoutX="106.0" layoutY="256.0" onAction="#downloadFile" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Download Files" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="editWorker1" buttonType="RAISED" layoutX="453.0" layoutY="256.0" onAction="#importExcell" prefHeight="25.0" prefWidth="202.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Import Ready Made Excell File" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <tooltip>
+                        <Tooltip text="Make Sure Your System Meets The Requirements" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="106.0" layoutY="198.0" onAction="#uploadFile" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Upload" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="494.0" layoutY="305.0" onAction="#email" prefHeight="25.0" prefWidth="120.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Email Services" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="484.0" layoutY="356.0" onAction="#sampleExcell" prefHeight="25.0" prefWidth="140.0" ripplerFill="#01ffee" styleClass="cardPane" stylesheets="@application.css" text="Sample Excell File" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="leftView" fitHeight="85.0" fitWidth="85.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="rightView" fitHeight="85.0" fitWidth="85.0" layoutX="877.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

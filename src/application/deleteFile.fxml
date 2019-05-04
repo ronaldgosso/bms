@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="472.0" styleClass="silver" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.deleteFileController">
+   <children>
+      <AnchorPane layoutX="23.0" layoutY="23.0" prefHeight="354.0" prefWidth="428.0" styleClass="homescrollPane" stylesheets="@application.css">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <Text fill="WHITE" layoutX="161.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELETE FILES">
+               <font>
+                  <Font name="Angsana New Bold" size="24.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="35.0" layoutY="62.0" prefHeight="98.0" prefWidth="365.0" styleClass="cardPane" stylesheets="@application.css">
+               <children>
+                  <Text layoutX="14.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Name :" />
+                  <JFXTextField fx:id="fileName" alignment="CENTER" labelFloat="true" layoutX="115.0" layoutY="42.0" prefHeight="25.0" prefWidth="211.0" promptText="ENTER FILE NAME" unFocusColor="#00d3f8" />
+               </children>
+            </AnchorPane>
+            <JFXButton buttonType="RAISED" layoutX="137.0" layoutY="216.0" onAction="#deleteFiles" prefHeight="25.0" prefWidth="169.0" ripplerFill="YELLOW" styleClass="deleteButton" stylesheets="@application.css" text="DELETE" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="35.0" layoutY="275.0" onAction="#exit" prefHeight="52.0" prefWidth="51.0" ripplerFill="WHITE" styleClass="offButton" stylesheets="@application.css" text="BACK" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" layoutX="324.0" layoutY="301.0" onAction="#refresh" prefHeight="25.0" prefWidth="76.0" ripplerFill="GREEN" text="REFRESH" textFill="GREEN" />
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

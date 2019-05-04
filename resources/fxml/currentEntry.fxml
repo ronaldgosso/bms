@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.currentEntryController">
+   <children>
+      <AnchorPane layoutX="25.0" layoutY="26.0" prefHeight="234.0" prefWidth="552.0" styleClass="silver" stylesheets="@application.css">
+         <children>
+            <Text layoutX="224.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUBMIT STATUS">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="statusText" editable="false" layoutX="150.0" layoutY="45.0" prefHeight="161.0" prefWidth="253.0" />
+         </children>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="520.0" layoutY="263.0" onAction="#exit" prefHeight="57.0" prefWidth="57.0" ripplerFill="WHITE" styleClass="offButton" stylesheets="@application.css" text="EXIT" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

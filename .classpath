@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/zxing"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/javaFx"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/fontAwesome"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/JDBC"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/jFoenix"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/poiNew"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jMail"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JEE"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Control FX"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Control FX1"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/poi3.9"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/unAccess"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

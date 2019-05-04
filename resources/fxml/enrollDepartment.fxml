@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="531.0" styleClass="homeGadget" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.enrollDepartmentController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="455.0" prefWidth="503.0" styleClass="silver" stylesheets="@application.css">
+         <children>
+            <TableView fx:id="departmentTable" layoutX="15.0" layoutY="40.0" prefHeight="361.0" prefWidth="469.0">
+              <columns>
+                <TableColumn fx:id="columnName" prefWidth="114.0" text="ID" />
+                <TableColumn fx:id="columnSerial" prefWidth="102.0" text="SERIAL" />
+                  <TableColumn fx:id="columnSupervisor" prefWidth="110.0" text="SUPERVISOR" />
+                  <TableColumn fx:id="columnDate" prefWidth="141.0" text="DATE OF CREATION" />
+              </columns>
+            </TableView>
+            <Text layoutX="217.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardPane" text="Departments">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Text>
+            <JFXButton layoutX="15.0" layoutY="416.0" onAction="#load" prefHeight="25.0" prefWidth="136.0" ripplerFill="GREEN" text="Load" />
+            <JFXButton layoutX="370.0" layoutY="416.0" onAction="#exit" prefHeight="25.0" prefWidth="114.0" styleClass="deleteButton" stylesheets="@application.css" text="EXIT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1120.0" styleClass="homescrollPane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.enrollIndividualTableController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="624.0" prefWidth="1093.0" styleClass="cardPane" stylesheets="@application.css">
+         <children>
+            <TableView fx:id="enrollTable" layoutX="64.0" layoutY="31.0" prefHeight="527.0" prefWidth="1005.0">
+              <columns>
+                <TableColumn fx:id="columnCheck" prefWidth="100.0" text="CHECK NO:" />
+                <TableColumn fx:id="columnFName" prefWidth="100.0" text="Jina La Kwanza" />
+                  <TableColumn fx:id="columnMName" prefWidth="100.0" text="Jina La Kati" />
+                  <TableColumn fx:id="columnLName" prefWidth="100.0" text="Jina La Mwisho" />
+                  <TableColumn fx:id="columnSex" prefWidth="50.0" text="Jinsia" />
+                  <TableColumn fx:id="columnCheo" minWidth="0.0" prefWidth="100.0" text="CHEO" />
+                  <TableColumn fx:id="columnMshahara" prefWidth="150.0" text="Ngazi Ya Mshahara" />
+                  <TableColumn fx:id="columnTsd" prefWidth="100.0" text="TSD" />
+                  <TableColumn fx:id="columnKuzaliwa" prefWidth="150.0" text="Tarehe Ya Kuzaliwa" />
+                  <TableColumn fx:id="columnAjira" prefWidth="100.0" text="Tarehe Ya Ajira" />
+                  <TableColumn fx:id="columnThibitishwa" prefWidth="190.0" text="Tarehe Ya Kuthibitishwa" />
+                  <TableColumn fx:id="columnDaraja" prefWidth="200.0" text="Tarehe Ya Daraja La Sasa" />
+                  <TableColumn fx:id="columnElimu" prefWidth="180.0" text="Kiwango Cha Elimu" />
+                  <TableColumn fx:id="columnChuo" prefWidth="100.0" text="Chuo Alichosoma" />
+                  <TableColumn fx:id="columnAliomaliza" prefWidth="100.0" text="Mwaka Aliomaliza" />
+                  <TableColumn fx:id="columnSasaKazi" prefWidth="200.0" text="Kituo Cha Sasa Cha Kazi" />
+                  <TableColumn fx:id="columnAwaliKazi" prefWidth="200.0" text="Kituo Cha Awali Cha Kazi" />
+                  <TableColumn fx:id="columnDini" prefWidth="100.0" text="DINI" />
+                  <TableColumn fx:id="columnAlipozaliwa" prefWidth="100.0" text="Mahali Alipozaliwa" />
+                  <TableColumn fx:id="columnNumber" prefWidth="100.0" text="Namba Ya Simu" />
+                  <TableColumn fx:id="columnSomo1" prefWidth="100.0" text="Somo La Kwanza" />
+                  <TableColumn fx:id="columnSomo2" prefWidth="100.0" text="Somo La Pili" />
+                  <TableColumn fx:id="columnKata" prefWidth="100.0" text="KATA" />
+              </columns>
+            </TableView>
+            <JFXButton buttonType="RAISED" layoutX="154.0" layoutY="572.0" onAction="#load" prefHeight="25.0" prefWidth="202.0" ripplerFill="BLUE" styleClass="bottom" stylesheets="@application.css" text="LOAD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="556.0" onAction="#exit" prefHeight="62.0" prefWidth="62.0" ripplerFill="WHITE" styleClass="offButton" stylesheets="@application.css" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="829.0" layoutY="572.0" onAction="#toExcell" prefHeight="25.0" prefWidth="202.0" ripplerFill="BLUE" styleClass="bottom" stylesheets="@application.css" text="TO EXCELL" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="saveAs" alignment="CENTER" focusColor="BLUE" layoutX="594.0" layoutY="575.0" prefHeight="25.0" prefWidth="202.0" promptText="FILE NAME" />
+            <Text fontSmoothingType="LCD" layoutX="492.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENROLL INDIVIDUALS">
+               <font>
+                  <Font name="Bookman Old Style" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

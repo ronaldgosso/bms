@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="600.0" styleClass="homescrollPane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.enrollSupervisorController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="513.0" prefWidth="568.0" styleClass="silver" stylesheets="@application.css">
+         <children>
+            <TableView fx:id="departmentTable" layoutX="15.0" layoutY="40.0" prefHeight="407.0" prefWidth="541.0">
+              <columns>
+                <TableColumn fx:id="columnUsername" prefWidth="72.0" text="USERNAME" />
+                <TableColumn fx:id="columnPassword" prefWidth="90.0" text="PASSWORD" />
+                  <TableColumn fx:id="columnEmail" prefWidth="133.0" text="EMAIL" />
+                  <TableColumn fx:id="columnFName" prefWidth="93.0" text="FIRST NAME" />
+                  <TableColumn fx:id="columnLName" prefWidth="82.0" text="LAST NAME" />
+                  <TableColumn fx:id="columnDate" prefWidth="75.0" text="DATE" />
+              </columns>
+            </TableView>
+            <Text layoutX="254.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardPane" text="Supervisors">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Text>
+            <JFXButton layoutX="15.0" layoutY="474.0" onAction="#loading" prefHeight="25.0" prefWidth="136.0" ripplerFill="GREEN" text="Load" />
+            <JFXButton layoutX="440.0" layoutY="474.0" onAction="#exiting" prefHeight="25.0" prefWidth="114.0" styleClass="deleteButton" stylesheets="@application.css" text="EXIT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.excellFileController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="14.0" prefHeight="399.0" prefWidth="355.0" styleClass="logout" stylesheets="@application.css">
+         <children>
+            <Text fill="WHITE" layoutX="111.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPORT EXCELL">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upload A File --&gt;" />
+            <JFXButton buttonType="RAISED" layoutX="152.0" layoutY="86.0" onAction="#chooseFile" prefHeight="25.0" prefWidth="164.0" ripplerFill="#00ff77" text="ADD FILE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton layoutX="152.0" layoutY="168.0" onAction="#viewFile" prefHeight="25.0" prefWidth="164.0" ripplerFill="WHITE" text="VIEW FILE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXButton>
+            <Text layoutX="9.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Uploaded File --&gt;" />
+            <JFXButton layoutX="152.0" layoutY="215.0" onAction="#importFile" prefHeight="25.0" prefWidth="164.0" styleClass="dev" stylesheets="@application.css" text="UPLOAD TO DATABASE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton ellipsisString="" layoutX="14.0" layoutY="335.0" onAction="#exit" prefHeight="50.0" prefWidth="48.0" styleClass="offButton" stylesheets="@application.css" text="BACK" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Text layoutX="14.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Import --&gt;" />
+            <TextArea fx:id="fileName" editable="false" layoutX="6.0" layoutY="118.0" prefHeight="37.0" prefWidth="146.0" promptText="File Name" />
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

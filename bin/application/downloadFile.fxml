@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="600.0" styleClass="but" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.downloadFileController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="15.0" prefHeight="299.0" prefWidth="571.0" styleClass="cardPane" stylesheets="@application.css">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <AnchorPane layoutX="33.0" layoutY="44.0" prefHeight="131.0" prefWidth="492.0" styleClass="silver" stylesheets="@application.css">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <Text layoutX="22.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Name :  " />
+                  <JFXTextField fx:id="fileName" alignment="CENTER" focusColor="#970026" labelFloat="true" layoutX="110.0" layoutY="49.0" prefHeight="25.0" prefWidth="331.0" promptText="file name" unFocusColor="#07dd00" />
+               </children>
+            </AnchorPane>
+            <Text layoutX="225.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOWNLOAD A FILE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="190.0" layoutY="201.0" prefHeight="61.0" prefWidth="200.0" styleClass="silver" stylesheets="@application.css">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="18.0" onAction="#downloadFile" prefHeight="25.0" prefWidth="148.0" ripplerFill="#db0000" text="DOWNLOAD">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <JFXButton layoutX="14.0" layoutY="204.0" onAction="#exit" prefHeight="54.0" prefWidth="53.0" styleClass="offButton" stylesheets="@application.css" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="449.0" layoutY="207.0" onAction="#refresh" prefHeight="54.0" prefWidth="76.0" ripplerFill="GREEN" text="REFRESH" textFill="GREEN" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
