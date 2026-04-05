@@ -451,10 +451,18 @@ public class EditWorkerController {
                 .hideAfter(javafx.util.Duration.seconds(3));
 
         switch (type) {
-            case ERROR -> notificationBuilder.showError();
-            case WARNING -> notificationBuilder.showWarning();
-            case INFORMATION -> notificationBuilder.showInformation();
-            default -> notificationBuilder.show();
+            case ERROR:
+                notificationBuilder.showError();
+                break;
+            case WARNING:
+                notificationBuilder.showWarning();
+                break;
+            case INFORMATION:
+                notificationBuilder.showInformation();
+                break;
+            default:
+                notificationBuilder.show();
+                break;
         }
     }
 

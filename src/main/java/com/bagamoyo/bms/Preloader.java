@@ -74,12 +74,11 @@ public class Preloader extends Preloader {
         progressBar = new ProgressBar(0);
         progressBar.setPrefWidth(WIDTH - 80);
         progressBar.getStyleClass().addAll("preloader-progress-bar");
-        progressBar.setStyle("""
-                -fx-accent: #00d4ff;
-                -fx-control-inner-background: #2a2a4a;
-                -fx-background-radius: 5;
-                -fx-padding: 5;
-                """);
+        progressBar.setStyle(
+                "-fx-accent: #00d4ff; " +
+                "-fx-control-inner-background: #2a2a4a; " +
+                "-fx-background-radius: 5; " +
+                "-fx-padding: 5;");
 
         // Status text
         var statusText = new Text("Initializing...");
