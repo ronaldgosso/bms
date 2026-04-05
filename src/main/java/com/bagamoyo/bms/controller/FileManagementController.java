@@ -10,6 +10,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import org.controlsfx.control.Notifications;
 import org.controlsfx.control.textfield.TextFields;
 import org.slf4j.Logger;

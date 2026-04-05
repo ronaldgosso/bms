@@ -77,11 +77,11 @@ public class MediaPlayerController {
         fileChooser.setTitle("Open Media File");
 
         FileChooser.ExtensionFilter allMediaFilter = new FileChooser.ExtensionFilter(
-                "Media Files", VIDEO_EXTENSIONS, AUDIO_EXTENSIONS);
+                "Media Files", VIDEO_EXTENSIONS.toArray(new String[0]));
         FileChooser.ExtensionFilter videoFilter = new FileChooser.ExtensionFilter(
-                "Video Files", VIDEO_EXTENSIONS);
+                "Video Files", VIDEO_EXTENSIONS.toArray(new String[0]));
         FileChooser.ExtensionFilter audioFilter = new FileChooser.ExtensionFilter(
-                "Audio Files", AUDIO_EXTENSIONS);
+                "Audio Files", AUDIO_EXTENSIONS.toArray(new String[0]));
         FileChooser.ExtensionFilter allFilesFilter = new FileChooser.ExtensionFilter(
                 "All Files", "*.*");
 

@@ -193,7 +193,6 @@ public class BmsApplication extends Application {
         var logger = LoggerFactory.getLogger(BmsApplication.class);
         logger.info("Bagamoyo District Council Management System v2.0 - Starting");
 
-        notifyPreloader(new ProgressNotification(0.1));
         logger.info("Initializing database connection");
 
         try {
@@ -203,7 +202,6 @@ public class BmsApplication extends Application {
             logger.error("Database initialization failed - application may not function correctly", e);
         }
 
-        notifyPreloader(new ProgressNotification(1.0));
         launch(args);
     }
 }

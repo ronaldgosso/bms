@@ -293,11 +293,8 @@ public class HomeController implements Initializable {
      */
     private void navigateTo(String fxmlPath, String title) {
         try {
-            Node sourceNode = (Node) javafx.event.Event.getCurrentTarget();
-            if (sourceNode != null) {
-                Stage currentStage = (Stage) sourceNode.getScene().getWindow();
-                currentStage.close();
-            }
+            Stage currentStage = (Stage) pie.getScene().getWindow();
+            currentStage.close();
         } catch (Exception e) {
             logger.debug("Could not close current window, opening new one instead", e);
         }
