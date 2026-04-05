@@ -212,25 +212,29 @@ public class FileManagementController {
             }
         }
 
+        final String finalFileName = fileName;
+
         // Prompt for save location
         Stage stage = (Stage) fileTable.getScene().getWindow();
         FileChooser saveChooser = new FileChooser();
         saveChooser.setTitle("Save File");
-        saveChooser.setInitialFileName(fileName);
+        saveChooser.setInitialFileName(finalFileName);
 
         File saveFile = saveChooser.showSaveDialog(stage);
         if (saveFile == null) {
             return;
         }
 
-        statusArea.setText("Downloading: " + fileName + "...");
+        final File finalSaveFile = saveFile;
+
+        statusArea.setText("Downloading: " + finalFileName + "...");
 
         Task<Boolean> task = new Task<>() {
             @Override
             protected Boolean call() throws IOException {
-                Optional<byte[]> fileData = fileService.downloadFile(fileName);
+                Optional<byte[]> fileData = fileService.downloadFile(finalFileName);
                 if (fileData.isPresent()) {
-                    try (FileOutputStream fos = new FileOutputStream(saveFile)) {
+                    try (FileOutputStream fos = new FileOutputStream(finalSaveFile)) {
                         fos.write(fileData.get());
                     }
                     return true;
@@ -242,17 +246,17 @@ public class FileManagementController {
         task.setOnSucceeded(e -> {
             boolean success = task.getValue();
             if (success) {
-                showSuccessNotification("File Downloaded", "File '" + fileName + "' saved to " + saveFile.getAbsolutePath());
-                statusArea.setText("File downloaded to: " + saveFile.getAbsolutePath());
-                logger.info("File downloaded: {} -> {}", fileName, saveFile.getAbsolutePath());
+                showSuccessNotification("File Downloaded", "File '" + finalFileName + "' saved to " + finalSaveFile.getAbsolutePath());
+                statusArea.setText("File downloaded to: " + finalSaveFile.getAbsolutePath());
+                logger.info("File downloaded: {} -> {}", finalFileName, finalSaveFile.getAbsolutePath());
             } else {
-                showErrorNotification("File not found: " + fileName);
-                statusArea.setText("File not found: " + fileName);
+                showErrorNotification("File not found: " + finalFileName);
+                statusArea.setText("File not found: " + finalFileName);
             }
         });
 
         task.setOnFailed(e -> {
-            logger.error("Error downloading file: {}", fileName, task.getException());
+            logger.error("Error downloading file: {}", finalFileName, task.getException());
             showErrorNotification("Error downloading file");
             statusArea.setText("Error downloading file");
         });
@@ -309,7 +313,7 @@ public class FileManagementController {
             });
 
             task.setOnFailed(e -> {
-                logger.error("Error deleting file: {}", fileName, task.getException());
+                logger.error("Error deleting file: {}", finalFileName, task.getException());
                 showErrorNotification("Error deleting file");
                 statusArea.setText("Error deleting file");
             });
