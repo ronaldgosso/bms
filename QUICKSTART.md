@@ -160,12 +160,67 @@ mvn javafx:run
 
 ---
 
+## 🔄 Continuous Integration (CI)
+
+This project uses **GitHub Actions** for automated builds and testing.
+
+### How CI Works
+
+Every time you **push** to `master` or open a **pull request**, GitHub Actions automatically:
+
+1. ✅ **Checks out** your code
+2. ✅ **Sets up** JDK 17 and 21
+3. ✅ **Compiles** the project on **Ubuntu, Windows, and macOS**
+4. ✅ **Runs tests** (when added)
+5. ✅ **Packages** the executable JAR
+6. ✅ **Uploads** the JAR as an artifact (7-day retention)
+
+### CI Configuration
+
+The workflow is defined in [`.github/workflows/maven-ci.yml`](.github/workflows/maven-ci.yml):
+
+```yaml
+# Triggered on push and pull requests
+on:
+  push:
+    branches: [ "master", "main" ]
+  pull_request:
+    branches: [ "master", "main" ]
+
+# Build matrix: 3 OS × 2 Java versions = 6 parallel jobs
+strategy:
+  matrix:
+    os: [ubuntu-latest, windows-latest, macos-latest]
+    java: [ '17', '21' ]
+```
+
+### Viewing CI Results
+
+- **Badge**: Add this to your README.md:
+  ```markdown
+  [![Java CI](https://github.com/your-username/bms/actions/workflows/maven-ci.yml/badge.svg)](https://github.com/your-username/bms/actions/workflows/maven-ci.yml)
+  ```
+
+- **Logs**: Go to **Actions** tab in your GitHub repository
+- **Artifacts**: Download built JARs from workflow runs
+
+### Skipping CI
+
+To skip CI for a commit (e.g., documentation-only changes):
+
+```bash
+git commit -m "docs: Update README [skip ci]"
+```
+
+---
+
 ## 📚 Next Steps
 
 - 📖 Read the full [README.md](README.md)
 - 🤝 Check [CONTRIBUTING.md](CONTRIBUTING.md) for development guidelines
 - 📝 See [CHANGELOG.md](CHANGELOG.md) for version history
 - 🐛 Report issues on GitHub
+- 🔄 View [CI workflows](https://github.com/your-username/bms/actions)
 
 ---
 

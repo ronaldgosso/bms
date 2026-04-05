@@ -1,5 +1,6 @@
 # 🏛️ Bagamoyo District Council Management System (BMS)
 
+[![Java CI](https://github.com/your-username/bms/actions/workflows/maven-ci.yml/badge.svg)](https://github.com/your-username/bms/actions/workflows/maven-ci.yml)
 [![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://openjdk.java.net/projects/jdk/17/)
 [![JavaFX](https://img.shields.io/badge/JavaFX-21.0.2-green.svg)](https://openjfx.io/)
 [![Maven](https://img.shields.io/badge/Maven-3.8+-blue.svg)](https://maven.apache.org/)
