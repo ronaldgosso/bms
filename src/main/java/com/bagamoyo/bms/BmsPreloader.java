@@ -21,9 +21,9 @@ import org.slf4j.LoggerFactory;
  * Modern JavaFX preloader for the Bagamoyo District Council Management System.
  * Displays a professional loading screen with progress indication during application startup.
  */
-public class Preloader extends Preloader {
+public class BmsPreloader extends Preloader {
 
-    private static final Logger logger = LoggerFactory.getLogger(Preloader.class);
+    private static final Logger logger = LoggerFactory.getLogger(BmsPreloader.class);
 
     private static final double WIDTH = 500;
     private static final double HEIGHT = 300;
