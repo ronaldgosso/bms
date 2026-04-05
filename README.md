@@ -217,7 +217,7 @@ git --version
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/bms.git
+git clone https://github.com/ronaldgosso/bms.git
 cd bms
 ```
 
@@ -391,11 +391,11 @@ See [`src/main/resources/db/migration/V1__Initial_Schema.sql`](src/main/resource
 │          Model-View-Controller          │
 ├─────────────────────────────────────────┤
 │                                         │
-│  Model      →  Data objects (POJOs)    │
-│  View       →  FXML files              │
-│  Controller →  JavaFX Controllers      │
-│  Service    →  Business logic layer    │
-│  Util       →  Database & helpers      │
+│  Model      →  Data objects (POJOs)     │
+│  View       →  FXML files               │
+│  Controller →  JavaFX Controllers       │
+│  Service    →  Business logic layer     │
+│  Util       →  Database & helpers       │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -508,7 +508,7 @@ mvn install
 
 ### Getting Help
 
-- Check the [Issues page](https://github.com/your-username/bms/issues)
+- Check the [Issues page](https://github.com/ronaldgosso/bms/issues)
 - Review logs in console (SLF4J output)
 - Enable debug logging: Add `-Dorg.slf4j.simpleLogger.defaultLogLevel=debug`
 
@@ -542,7 +542,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Credits
 
-**Original Developer (2017)**: Gosso Ronald - UDSM (University of Dar es Salaam)  
+**Original Developer (2017)**: Gosso Ronald
 **Modernization (2026)**: Comprehensive refactoring to Java 17, Maven, H2, and modern architecture
 
 **Special Thanks**:
@@ -556,10 +556,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 For questions or support:
-- 📧 Email: [your-email@example.com](mailto:your-email@example.com)
-- 🌐 Website: [Bagamoyo District Council](http://www.bagamoyo.go.tz)
+📧 Email: [ronaldgosso@gmail.com](mailto:ronaldgosso@gmail.com)
+
 
 ---
+
 
 **Made with ❤️ for the People of Bagamoyo District**
 
