@@ -1,0 +1,821 @@
+/* ============================================
+   Bagamoyo District Council Management System
+   Basic Application Stylesheet - BasicApplication.css
+   Layout Utilities & Component Basics
+   ============================================ */
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+
+/* Flex-like Containers */
+.container {
+    -fx-spacing: 16px;
+    -fx-alignment: center-left;
+}
+
+.container-row {
+    -fx-orientation: horizontal;
+    -fx-spacing: 16px;
+    -fx-alignment: center-left;
+}
+
+.container-column {
+    -fx-orientation: vertical;
+    -fx-spacing: 16px;
+    -fx-alignment: center-left;
+}
+
+/* Wrap Container */
+.wrap-container {
+    -fx-hgap: 16px;
+    -fx-vgap: 16px;
+}
+
+/* Grid Container */
+.grid-container {
+    -fx-hgap: 20px;
+    -fx-vgap: 20px;
+    -fx-padding: 20px;
+}
+
+/* ============================================
+   SPACING UTILITIES - MARGINS
+   ============================================ */
+
+/* Margin All */
+.m-0 { -fx-padding: 0; }
+.m-1 { -fx-padding: 4px; }
+.m-2 { -fx-padding: 8px; }
+.m-3 { -fx-padding: 12px; }
+.m-4 { -fx-padding: 16px; }
+.m-5 { -fx-padding: 20px; }
+.m-6 { -fx-padding: 24px; }
+.m-8 { -fx-padding: 32px; }
+.m-10 { -fx-padding: 40px; }
+
+/* Margin Top */
+.mt-0 { -fx-padding: 0 0 0 0; }
+.mt-1 { -fx-padding: 4px 0 0 0; }
+.mt-2 { -fx-padding: 8px 0 0 0; }
+.mt-3 { -fx-padding: 12px 0 0 0; }
+.mt-4 { -fx-padding: 16px 0 0 0; }
+.mt-5 { -fx-padding: 20px 0 0 0; }
+.mt-6 { -fx-padding: 24px 0 0 0; }
+.mt-8 { -fx-padding: 32px 0 0 0; }
+
+/* Margin Bottom */
+.mb-0 { -fx-padding: 0 0 0 0; }
+.mb-1 { -fx-padding: 0 0 4px 0; }
+.mb-2 { -fx-padding: 0 0 8px 0; }
+.mb-3 { -fx-padding: 0 0 12px 0; }
+.mb-4 { -fx-padding: 0 0 16px 0; }
+.mb-5 { -fx-padding: 0 0 20px 0; }
+.mb-6 { -fx-padding: 0 0 24px 0; }
+.mb-8 { -fx-padding: 0 0 32px 0; }
+
+/* Margin Left */
+.ml-0 { -fx-padding: 0 0 0 0; }
+.ml-1 { -fx-padding: 0 0 0 4px; }
+.ml-2 { -fx-padding: 0 0 0 8px; }
+.ml-3 { -fx-padding: 0 0 0 12px; }
+.ml-4 { -fx-padding: 0 0 0 16px; }
+.ml-5 { -fx-padding: 0 0 0 20px; }
+.ml-6 { -fx-padding: 0 0 0 24px; }
+.ml-8 { -fx-padding: 0 0 0 32px; }
+
+/* Margin Right */
+.mr-0 { -fx-padding: 0 0 0 0; }
+.mr-1 { -fx-padding: 0 4px 0 0; }
+.mr-2 { -fx-padding: 0 8px 0 0; }
+.mr-3 { -fx-padding: 0 12px 0 0; }
+.mr-4 { -fx-padding: 0 16px 0 0; }
+.mr-5 { -fx-padding: 0 20px 0 0; }
+.mr-6 { -fx-padding: 0 24px 0 0; }
+.mr-8 { -fx-padding: 0 32px 0 0; }
+
+/* Margin Horizontal */
+.mx-0 { -fx-padding: 0 0; }
+.mx-1 { -fx-padding: 0 4px; }
+.mx-2 { -fx-padding: 0 8px; }
+.mx-3 { -fx-padding: 0 12px; }
+.mx-4 { -fx-padding: 0 16px; }
+.mx-5 { -fx-padding: 0 20px; }
+.mx-6 { -fx-padding: 0 24px; }
+.mx-8 { -fx-padding: 0 32px; }
+
+/* Margin Vertical */
+.my-0 { -fx-padding: 0 0; }
+.my-1 { -fx-padding: 4px 0; }
+.my-2 { -fx-padding: 8px 0; }
+.my-3 { -fx-padding: 12px 0; }
+.my-4 { -fx-padding: 16px 0; }
+.my-5 { -fx-padding: 20px 0; }
+.my-6 { -fx-padding: 24px 0; }
+.my-8 { -fx-padding: 32px 0; }
+
+/* ============================================
+   SPACING UTILITIES - PADDING (Internal)
+   ============================================ */
+
+/* Padding All */
+.p-0 { -fx-padding: 0; }
+.p-1 { -fx-padding: 4px; }
+.p-2 { -fx-padding: 8px; }
+.p-3 { -fx-padding: 12px; }
+.p-4 { -fx-padding: 16px; }
+.p-5 { -fx-padding: 20px; }
+.p-6 { -fx-padding: 24px; }
+.p-8 { -fx-padding: 32px; }
+.p-10 { -fx-padding: 40px; }
+
+/* Padding Top */
+.pt-0 { -fx-padding: 0 0 0 0; }
+.pt-1 { -fx-padding: 4px 0 0 0; }
+.pt-2 { -fx-padding: 8px 0 0 0; }
+.pt-3 { -fx-padding: 12px 0 0 0; }
+.pt-4 { -fx-padding: 16px 0 0 0; }
+.pt-5 { -fx-padding: 20px 0 0 0; }
+.pt-6 { -fx-padding: 24px 0 0 0; }
+.pt-8 { -fx-padding: 32px 0 0 0; }
+
+/* Padding Bottom */
+.pb-0 { -fx-padding: 0 0 0 0; }
+.pb-1 { -fx-padding: 0 0 4px 0; }
+.pb-2 { -fx-padding: 0 0 8px 0; }
+.pb-3 { -fx-padding: 0 0 12px 0; }
+.pb-4 { -fx-padding: 0 0 16px 0; }
+.pb-5 { -fx-padding: 0 0 20px 0; }
+.pb-6 { -fx-padding: 0 0 24px 0; }
+.pb-8 { -fx-padding: 0 0 32px 0; }
+
+/* Padding Left */
+.pl-0 { -fx-padding: 0 0 0 0; }
+.pl-1 { -fx-padding: 0 0 0 4px; }
+.pl-2 { -fx-padding: 0 0 0 8px; }
+.pl-3 { -fx-padding: 0 0 0 12px; }
+.pl-4 { -fx-padding: 0 0 0 16px; }
+.pl-5 { -fx-padding: 0 0 0 20px; }
+.pl-6 { -fx-padding: 0 0 0 24px; }
+.pl-8 { -fx-padding: 0 0 0 32px; }
+
+/* Padding Right */
+.pr-0 { -fx-padding: 0 0 0 0; }
+.pr-1 { -fx-padding: 0 4px 0 0; }
+.pr-2 { -fx-padding: 0 8px 0 0; }
+.pr-3 { -fx-padding: 0 12px 0 0; }
+.pr-4 { -fx-padding: 0 16px 0 0; }
+.pr-5 { -fx-padding: 0 20px 0 0; }
+.pr-6 { -fx-padding: 0 24px 0 0; }
+.pr-8 { -fx-padding: 0 32px 0 0; }
+
+/* Padding Horizontal */
+.px-0 { -fx-padding: 0 0; }
+.px-1 { -fx-padding: 0 4px; }
+.px-2 { -fx-padding: 0 8px; }
+.px-3 { -fx-padding: 0 12px; }
+.px-4 { -fx-padding: 0 16px; }
+.px-5 { -fx-padding: 0 20px; }
+.px-6 { -fx-padding: 0 24px; }
+.px-8 { -fx-padding: 0 32px; }
+
+/* Padding Vertical */
+.py-0 { -fx-padding: 0 0; }
+.py-1 { -fx-padding: 4px 0; }
+.py-2 { -fx-padding: 8px 0; }
+.py-3 { -fx-padding: 12px 0; }
+.py-4 { -fx-padding: 16px 0; }
+.py-5 { -fx-padding: 20px 0; }
+.py-6 { -fx-padding: 24px 0; }
+.py-8 { -fx-padding: 32px 0; }
+
+/* ============================================
+   TEXT ALIGNMENT CLASSES
+   ============================================ */
+
+.text-left {
+    -fx-alignment: center-left;
+    -fx-text-alignment: left;
+}
+
+.text-center {
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.text-right {
+    -fx-alignment: center-right;
+    -fx-text-alignment: right;
+}
+
+.text-justify {
+    -fx-text-alignment: justify;
+}
+
+/* ============================================
+   FONT WEIGHT UTILITIES
+   ============================================ */
+
+.font-light {
+    -fx-font-weight: 300;
+}
+
+.font-normal {
+    -fx-font-weight: 400;
+}
+
+.font-medium {
+    -fx-font-weight: 500;
+}
+
+.font-semibold {
+    -fx-font-weight: 600;
+}
+
+.font-bold {
+    -fx-font-weight: 700;
+}
+
+/* ============================================
+   FONT SIZE UTILITIES
+   ============================================ */
+
+.text-xs {
+    -fx-font-size: 12px;
+}
+
+.text-sm {
+    -fx-font-size: 14px;
+}
+
+.text-base {
+    -fx-font-size: 16px;
+}
+
+.text-lg {
+    -fx-font-size: 18px;
+}
+
+.text-xl {
+    -fx-font-size: 20px;
+}
+
+.text-2xl {
+    -fx-font-size: 24px;
+}
+
+.text-3xl {
+    -fx-font-size: 30px;
+}
+
+.text-4xl {
+    -fx-font-size: 36px;
+}
+
+/* ============================================
+   CONTAINER STYLES
+   ============================================ */
+
+/* Main Content Container */
+.content-container {
+    -fx-background-color: #f5f7fa;
+    -fx-padding: 24px;
+    -fx-spacing: 24px;
+}
+
+/* Page Container */
+.page-container {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 10, 0, 0, 2);
+    -fx-padding: 24px;
+}
+
+/* Section Container */
+.section {
+    -fx-padding: 20px;
+    -fx-spacing: 16px;
+}
+
+/* Section Header */
+.section-header {
+    -fx-padding: 0 0 16px 0;
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+/* Full Width Container */
+.full-width {
+    -fx-max-width: infinity;
+    -fx-pref-width: infinity;
+}
+
+/* ============================================
+   OVERLAY STYLES
+   ============================================ */
+
+/* Dark Overlay */
+.overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-background-radius: 0;
+}
+
+/* Light Overlay */
+.overlay-light {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 0;
+}
+
+/* Blur Effect Container */
+.overlay-blur {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0, 0, 0);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-background-radius: 0;
+}
+
+/* ============================================
+   LOADING SPINNER STYLES
+   ============================================ */
+
+/* Progress Indicator */
+.loading-spinner {
+    -fx-progress-color: #1E88E5;
+    -fx-min-width: 48px;
+    -fx-min-height: 48px;
+}
+
+.loading-spinner.small {
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
+}
+
+.loading-spinner.medium {
+    -fx-min-width: 48px;
+    -fx-min-height: 48px;
+}
+
+.loading-spinner.large {
+    -fx-min-width: 64px;
+    -fx-min-height: 64px;
+}
+
+/* Loading Container */
+.loading-container {
+    -fx-alignment: center;
+    -fx-spacing: 16px;
+    -fx-padding: 40px;
+}
+
+.loading-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #757575;
+    -fx-font-style: italic;
+}
+
+/* Skeleton Loader */
+.skeleton {
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 4px;
+}
+
+.skeleton-circle {
+    -fx-background-radius: 50%;
+}
+
+.skeleton-text {
+    -fx-background-radius: 4px;
+    -fx-min-height: 16px;
+}
+
+.skeleton-title {
+    -fx-min-height: 24px;
+    -fx-min-width: 60%;
+}
+
+.skeleton-subtitle {
+    -fx-min-height: 16px;
+    -fx-min-width: 40%;
+}
+
+/* ============================================
+   ICON SIZING
+   ============================================ */
+
+/* Icon Sizes */
+.icon {
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
+    -fx-max-width: 24px;
+    -fx-max-height: 24px;
+}
+
+.icon-xs {
+    -fx-min-width: 12px;
+    -fx-min-height: 12px;
+    -fx-max-width: 12px;
+    -fx-max-height: 12px;
+}
+
+.icon-sm {
+    -fx-min-width: 16px;
+    -fx-min-height: 16px;
+    -fx-max-width: 16px;
+    -fx-max-height: 16px;
+}
+
+.icon-md {
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
+    -fx-max-width: 24px;
+    -fx-max-height: 24px;
+}
+
+.icon-lg {
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-max-width: 32px;
+    -fx-max-height: 32px;
+}
+
+.icon-xl {
+    -fx-min-width: 48px;
+    -fx-min-height: 48px;
+    -fx-max-width: 48px;
+    -fx-max-height: 48px;
+}
+
+.icon-2xl {
+    -fx-min-width: 64px;
+    -fx-min-height: 64px;
+    -fx-max-width: 64px;
+    -fx-max-height: 64px;
+}
+
+/* Icon Button Container */
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 8px;
+    -fx-background-radius: 50%;
+    -fx-transition: 0.3s ease;
+}
+
+.icon-button:hover {
+    -fx-background-color: rgba(30, 136, 229, 0.08);
+}
+
+/* ============================================
+   WIDTH & HEIGHT UTILITIES
+   ============================================ */
+
+/* Width */
+.w-auto { -fx-pref-width: -1; }
+.w-full { -fx-pref-width: infinity; -fx-max-width: infinity; }
+.w-50 { -fx-max-width: 50%; }
+.w-75 { -fx-max-width: 75%; }
+.w-100 { -fx-max-width: 100%; }
+
+/* Height */
+.h-auto { -fx-pref-height: -1; }
+.h-full { -fx-pref-height: infinity; -fx-max-height: infinity; }
+
+/* ============================================
+   DISPLAY UTILITIES
+   ============================================ */
+
+/* Visibility */
+.visible {
+    -fx-opacity: 1.0;
+}
+
+.invisible {
+    -fx-opacity: 0.0;
+}
+
+.hidden {
+    -fx-opacity: 0.0;
+    -fx-managed: false;
+}
+
+/* ============================================
+   FLEX / ALIGNMENT UTILITIES
+   ============================================ */
+
+/* Alignment */
+.align-start {
+    -fx-alignment: top-left;
+}
+
+.align-center {
+    -fx-alignment: center;
+}
+
+.align-end {
+    -fx-alignment: bottom-right;
+}
+
+.align-center-left {
+    -fx-alignment: center-left;
+}
+
+.align-center-right {
+    -fx-alignment: center-right;
+}
+
+.align-top-center {
+    -fx-alignment: top-center;
+}
+
+.align-bottom-center {
+    -fx-alignment: bottom-center;
+}
+
+/* Space Between */
+.space-between {
+    -fx-spacing: 0;
+    -fx-alignment: center-left;
+}
+
+.space-around {
+    -fx-spacing: 16px;
+    -fx-alignment: center;
+}
+
+/* ============================================
+   BORDER UTILITIES
+   ============================================ */
+
+.border {
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.border-top {
+    -fx-border-color: transparent transparent transparent transparent;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.border-bottom {
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.border-left {
+    -fx-border-color: transparent transparent transparent #e0e0e0;
+    -fx-border-width: 0 0 0 1px;
+}
+
+.border-right {
+    -fx-border-color: transparent #e0e0e0 transparent transparent;
+    -fx-border-width: 0 1px 0 0;
+}
+
+/* Border Colors */
+.border-primary {
+    -fx-border-color: #43A047;
+}
+
+.border-accent {
+    -fx-border-color: #1E88E5;
+}
+
+.border-success {
+    -fx-border-color: #43A047;
+}
+
+.border-warning {
+    -fx-border-color: #FFA726;
+}
+
+.border-danger {
+    -fx-border-color: #E53935;
+}
+
+/* Border Radius */
+.rounded-sm {
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.rounded-md {
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.rounded-lg {
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+
+.rounded-xl {
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+}
+
+.rounded-full {
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+}
+
+/* ============================================
+   SHADOW UTILITIES
+   ============================================ */
+
+.shadow-sm {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 4, 0, 0, 1);
+}
+
+.shadow-md {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 8, 0, 0, 2);
+}
+
+.shadow-lg {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 16, 0, 0, 4);
+}
+
+.shadow-xl {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 24, 0, 0, 8);
+}
+
+.shadow-none {
+    -fx-effect: none;
+}
+
+/* ============================================
+   BACKGROUND UTILITIES
+   ============================================ */
+
+.bg-white {
+    -fx-background-color: #ffffff;
+}
+
+.bg-gray-50 {
+    -fx-background-color: #FAFAFA;
+}
+
+.bg-gray-100 {
+    -fx-background-color: #F5F5F5;
+}
+
+.bg-gray-200 {
+    -fx-background-color: #EEEEEE;
+}
+
+.bg-primary {
+    -fx-background-color: #43A047;
+}
+
+.bg-accent {
+    -fx-background-color: #1E88E5;
+}
+
+.bg-success {
+    -fx-background-color: #43A047;
+}
+
+.bg-warning {
+    -fx-background-color: #FFA726;
+}
+
+.bg-danger {
+    -fx-background-color: #E53935;
+}
+
+.bg-transparent {
+    -fx-background-color: transparent;
+}
+
+/* ============================================
+   TEXT COLOR UTILITIES
+   ============================================ */
+
+.text-white {
+    -fx-text-fill: #ffffff;
+}
+
+.text-gray-500 {
+    -fx-text-fill: #9E9E9E;
+}
+
+.text-gray-600 {
+    -fx-text-fill: #757575;
+}
+
+.text-gray-700 {
+    -fx-text-fill: #616161;
+}
+
+.text-gray-800 {
+    -fx-text-fill: #424242;
+}
+
+.text-gray-900 {
+    -fx-text-fill: #212121;
+}
+
+.text-primary {
+    -fx-text-fill: #43A047;
+}
+
+.text-accent {
+    -fx-text-fill: #1E88E5;
+}
+
+.text-success {
+    -fx-text-fill: #43A047;
+}
+
+.text-warning {
+    -fx-text-fill: #FFA726;
+}
+
+.text-danger {
+    -fx-text-fill: #E53935;
+}
+
+/* ============================================
+   CURSOR UTILITIES
+   ============================================ */
+
+.cursor-pointer {
+    -fx-cursor: hand;
+}
+
+.cursor-default {
+    -fx-cursor: default;
+}
+
+.cursor-text {
+    -fx-cursor: text;
+}
+
+/* ============================================
+   TRANSITION UTILITIES
+   ============================================ */
+
+.transition-fast {
+    -fx-transition: 0.15s ease;
+}
+
+.transition-base {
+    -fx-transition: 0.3s ease;
+}
+
+.transition-slow {
+    -fx-transition: 0.5s ease;
+}
+
+/* ============================================
+   Z-INDEX SIMULATION (via ordering)
+   ============================================ */
+
+/* Note: JavaFX doesn't have z-index, use node ordering */
+/* These classes serve as documentation */
+
+.bring-to-front {
+    /* Move to front in code: node.toFront() */
+}
+
+.send-to-back {
+    /* Move to back in code: node.toBack() */
+}
+
+/* ============================================
+   RESPONSIVE HELPERS
+   ============================================ */
+
+/* These classes can be toggled via code based on window size */
+
+/* Small screens (< 768px) */
+.responsive-sm-padding {
+    -fx-padding: 12px;
+}
+
+/* Medium screens (768px - 1024px) */
+.responsive-md-padding {
+    -fx-padding: 20px;
+}
+
+/* Large screens (> 1024px) */
+.responsive-lg-padding {
+    -fx-padding: 32px;
+}
+
+/* ============================================
+   LEGACY MENU BAR SUPPORT
+   ============================================ */
+
+.menu-bar {
+    -fx-background-color: #aeb5ba, linear-gradient(to bottom, #ecf4fa 0%, #ced4d9 100%);
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.menu-bar .menu .label {
+    -fx-text-fill: #2d3e4c;
+}
