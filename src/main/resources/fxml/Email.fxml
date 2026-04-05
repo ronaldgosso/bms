@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="650.0" prefWidth="700.0" spacing="15.0" stylesheets="@/css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bagamoyo.bms.controller.EmailController">
+
+    <padding>
+        <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #1976D2;">
+        <children>
+            <Label style="-fx-text-fill: white;" text="Email Client">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Label>
+        </children>
+        <padding>
+            <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+        </padding>
+    </HBox>
+
+    <!-- Email Compose Section -->
+    <VBox spacing="12.0" style="-fx-background-color: #FAFAFA; -fx-background-radius: 10; -fx-padding: 15;">
+        <children>
+            <Label style="-fx-text-fill: #37474F;" text="Compose Email">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+
+            <!-- To Field -->
+            <JFXTextField fx:id="toField" labelFloat="true" prefWidth="600.0" promptText="recipient@example.com">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </JFXTextField>
+
+            <!-- Subject Field -->
+            <JFXTextField fx:id="subjectField" labelFloat="true" prefWidth="600.0" promptText="Email subject">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </JFXTextField>
+
+            <!-- Body TextArea -->
+            <TextArea fx:id="bodyArea" prefHeight="180.0" promptText="Write your message here..." wrapText="true">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </TextArea>
+
+            <!-- Attachment Section -->
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+                <children>
+                    <Label style="-fx-text-fill: #78909C;" text="Attachment:">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="attachmentLabel" style="-fx-text-fill: #424242; -fx-background-color: #E0E0E0; -fx-background-radius: 5;" text="No file selected">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                        <padding>
+                            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                        </padding>
+                    </Label>
+                    <JFXButton fx:id="attachButton" onAction="#handleAttachFile" style="-fx-background-color: #FF9800; -fx-background-radius: 8;" text="Attach File" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </JFXButton>
+                </children>
+            </HBox>
+
+            <!-- Send Button -->
+            <JFXButton fx:id="sendButton" onAction="#handleSend" prefWidth="600.0" style="-fx-background-color: #4CAF50; -fx-background-radius: 8;" text="Send Email" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+            </JFXButton>
+        </children>
+    </VBox>
+
+    <Separator />
+
+    <!-- Gmail Sign-In Section -->
+    <VBox spacing="12.0" style="-fx-background-color: #FAFAFA; -fx-background-radius: 10; -fx-padding: 15;">
+        <children>
+            <Label style="-fx-text-fill: #37474F;" text="Gmail Sign-In">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+
+            <!-- Username Field -->
+            <JFXTextField fx:id="gmailUsernameField" labelFloat="true" prefWidth="600.0" promptText="your.email@gmail.com">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </JFXTextField>
+
+            <!-- Password Field -->
+            <JFXPasswordField fx:id="gmailPasswordField" labelFloat="true" prefWidth="600.0" promptText="Gmail password">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </JFXPasswordField>
+
+            <!-- Sign-In Status Label -->
+            <Label fx:id="signInStatusLabel" style="-fx-text-fill: #78909C;" text="Not signed in">
+                <font>
+                    <Font size="13.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+</VBox>

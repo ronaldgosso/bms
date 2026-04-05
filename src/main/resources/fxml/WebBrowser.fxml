@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane prefHeight="650.0" prefWidth="1000.0" stylesheets="@/css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bagamoyo.bms.controller.WebBrowserController">
+
+    <!-- Top: Toolbar -->
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <!-- Title Bar -->
+                <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #1976D2;">
+                    <children>
+                        <Label style="-fx-text-fill: white;" text="Web Browser">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                    </padding>
+                </HBox>
+
+                <!-- Navigation Toolbar -->
+                <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: #E3F2FD;">
+                    <children>
+                        <!-- Navigation Buttons -->
+                        <JFXButton fx:id="backButton" onAction="#handleBack" style="-fx-background-color: #1976D2; -fx-background-radius: 8;" text="Back" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="forwardButton" onAction="#handleForward" style="-fx-background-color: #1976D2; -fx-background-radius: 8;" text="Forward" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="refreshButton" onAction="#handleRefresh" style="-fx-background-color: #1976D2; -fx-background-radius: 8;" text="Refresh" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="homeButton" onAction="#handleHome" style="-fx-background-color: #1976D2; -fx-background-radius: 8;" text="Home" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </JFXButton>
+
+                        <!-- URL Bar -->
+                        <JFXTextField fx:id="urlBar" HBox.hgrow="ALWAYS" labelFloat="false" promptText="Enter URL or search..." style="-fx-background-color: white;">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </JFXTextField>
+
+                        <!-- Go Button -->
+                        <JFXButton fx:id="goButton" onAction="#handleGo" style="-fx-background-color: #4CAF50; -fx-background-radius: 8;" text="Go" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+
+    <!-- Center: WebView -->
+    <center>
+        <WebView fx:id="webView" BorderPane.alignment="CENTER" />
+    </center>
+
+    <!-- Bottom: Status Bar -->
+    <bottom>
+        <VBox style="-fx-background-color: #263238;" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Page Title -->
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label fx:id="pageTitleLabel" style="-fx-text-fill: #B0BEC5;" text="Ready">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                    </padding>
+                </HBox>
+
+                <!-- Loading Progress Bar -->
+                <ProgressBar fx:id="loadProgressBar" prefWidth="970.0" progress="0.0" visible="false" />
+            </children>
+        </VBox>
+    </bottom>
+</BorderPane>

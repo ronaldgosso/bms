@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="750.0" prefWidth="1300.0" stylesheets="@/css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bagamoyo.bms.controller.SupervisorDashboardController">
+
+    <!-- Top Navigation Bar -->
+    <top>
+        <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #FB8C00;" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Logo and Title -->
+                <HBox alignment="CENTER_LEFT" spacing="15.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <ImageView fx:id="leftView" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/img/baga.png" />
+                            </image>
+                        </ImageView>
+                        <VBox>
+                            <children>
+                                <Label style="-fx-text-fill: white;" text="Supervisor Dashboard">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label style="-fx-text-fill: #FFE0B2;" text="Bagamoyo District Council">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </HBox>
+
+                <!-- Total Workers Display -->
+                <VBox alignment="CENTER" style="-fx-background-color: rgba(255,255,255,0.2); -fx-background-radius: 8;">
+                    <children>
+                        <Label fx:id="totalWorkersLabel" style="-fx-text-fill: white;" text="0">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label style="-fx-text-fill: #FFE0B2;" text="Total Workers">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="8.0" left="15.0" right="15.0" top="8.0" />
+                    </padding>
+                </VBox>
+
+                <!-- Logout Button -->
+                <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: rgba(255,255,255,0.2); -fx-background-radius: 8;" text="Logout" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </top>
+
+    <!-- Left Navigation -->
+    <left>
+        <VBox prefWidth="200.0" spacing="5.0" style="-fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+            </padding>
+            <children>
+                <ImageView fx:id="backView" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/img/baga.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+    </left>
+
+    <!-- Center Content -->
+    <center>
+        <VBox spacing="25.0" style="-fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            <children>
+                <!-- Section Title -->
+                <Label style="-fx-text-fill: #37474F;" text="Worker Management">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+
+                <!-- Worker Management Cards -->
+                <GridPane hgap="20.0" vgap="20.0">
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+
+                    <!-- Add Worker -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/add_worker.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="Add Worker">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnAddWorker" mnemonicParsing="false" onAction="#handleAddWorker" prefWidth="150.0" style="-fx-background-color: #43A047; -fx-background-radius: 8;" text="Add Worker" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+
+                    <!-- Edit Worker -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/edit_worker.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="Edit Worker">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnEditWorker" mnemonicParsing="false" onAction="#handleEditWorker" prefWidth="150.0" style="-fx-background-color: #1E88E5; -fx-background-radius: 8;" text="Edit Worker" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+
+                    <!-- Delete Worker -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/delete_worker.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="Delete Worker">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnDeleteWorker" mnemonicParsing="false" onAction="#handleDeleteWorker" prefWidth="150.0" style="-fx-background-color: #F44336; -fx-background-radius: 8;" text="Delete Worker" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+
+                    <!-- View All Workers -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/view_workers.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="View All Workers">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnViewWorkers" mnemonicParsing="false" onAction="#handleViewWorkers" prefWidth="150.0" style="-fx-background-color: #FB8C00; -fx-background-radius: 8;" text="View Workers" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+                </GridPane>
+
+                <Separator />
+
+                <!-- File Management Section -->
+                <Label style="-fx-text-fill: #37474F;" text="File Management">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+
+                <GridPane hgap="20.0" vgap="20.0">
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+
+                    <!-- Import Excel -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/import_excel.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="Import Excel">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnImportExcel" mnemonicParsing="false" onAction="#handleImportExcel" prefWidth="150.0" style="-fx-background-color: #43A047; -fx-background-radius: 8;" text="Import" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+
+                    <!-- Export Excel -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/export_excel.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="Export Excel">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnExportExcel" mnemonicParsing="false" onAction="#handleExportExcel" prefWidth="150.0" style="-fx-background-color: #1E88E5; -fx-background-radius: 8;" text="Export" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+
+                    <!-- File Management -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/file_management.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="File Management">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnViewFiles" mnemonicParsing="false" onAction="#handleViewFiles" prefWidth="150.0" style="-fx-background-color: #FB8C00; -fx-background-radius: 8;" text="View Files" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+
+                    <!-- Upload File -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/upload_file.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="Upload File">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnUploadFile" mnemonicParsing="false" onAction="#handleUploadFile" prefWidth="150.0" style="-fx-background-color: #43A047; -fx-background-radius: 8;" text="Upload" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+                </GridPane>
+
+                <Separator />
+
+                <!-- Communication Section -->
+                <Label style="-fx-text-fill: #37474F;" text="Communication &amp; Tools">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+
+                <GridPane hgap="20.0" vgap="20.0">
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+
+                    <!-- Email -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/email_icon.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="Email">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnEmail" mnemonicParsing="false" onAction="#handleEmail" prefWidth="150.0" style="-fx-background-color: #1E88E5; -fx-background-radius: 8;" text="Email" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+
+                    <!-- Chat -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/chat_icon.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="Chat">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnChatServer" mnemonicParsing="false" onAction="#handleChatServer" prefWidth="150.0" style="-fx-background-color: #43A047; -fx-background-radius: 8;" text="Chat Server" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+
+                    <!-- Chat Client -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/chat_client.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="Chat Client">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnChatClient" mnemonicParsing="false" onAction="#handleChatClient" prefWidth="150.0" style="-fx-background-color: #1E88E5; -fx-background-radius: 8;" text="Chat Client" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+
+                    <!-- Help -->
+                    <VBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                        <children>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@/img/help_icon.png" />
+                                </image>
+                            </ImageView>
+                            <Label style="-fx-text-fill: #37474F;" text="Help">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnHelp" mnemonicParsing="false" onAction="#handleHelp" prefWidth="150.0" style="-fx-background-color: #FB8C00; -fx-background-radius: 8;" text="Help" textFill="WHITE">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+                </GridPane>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- Right Navigation -->
+    <right>
+        <VBox prefWidth="150.0" spacing="10.0" style="-fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+            </padding>
+            <children>
+                <ImageView fx:id="rightView" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/img/baga.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+    </right>
+</BorderPane>

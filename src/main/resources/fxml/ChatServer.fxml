@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="750.0" spacing="15.0" stylesheets="@/css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bagamoyo.bms.controller.ChatServerController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #1976D2;">
+        <children>
+            <Label style="-fx-text-fill: white;" text="Chat Server">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Label>
+        </children>
+        <padding>
+            <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+        </padding>
+    </HBox>
+
+    <!-- Server Control Section -->
+    <VBox spacing="10.0" style="-fx-background-color: #FAFAFA; -fx-background-radius: 10; -fx-padding: 15;">
+        <children>
+            <Label style="-fx-text-fill: #37474F;" text="Server Configuration">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+
+            <!-- Port and Controls -->
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+                <children>
+                    <Label style="-fx-text-fill: #78909C;" text="Port:">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="portField" prefWidth="120.0" text="8888">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </JFXTextField>
+                    <JFXButton fx:id="startStopButton" onAction="#handleStartStopServer" style="-fx-background-color: #4CAF50; -fx-background-radius: 8;" text="Start Server" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </JFXButton>
+                    <Label fx:id="statusLabel" style="-fx-text-fill: #78909C;" text="Server: Stopped">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+
+    <!-- Connected Users Section -->
+    <VBox spacing="10.0" style="-fx-background-color: #FAFAFA; -fx-background-radius: 10; -fx-padding: 15;">
+        <children>
+            <Label style="-fx-text-fill: #37474F;" text="Connected Users">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+            <ListView fx:id="usersListView" prefHeight="150.0" />
+        </children>
+    </VBox>
+
+    <!-- Message Log Section -->
+    <VBox spacing="10.0" VBox.vgrow="ALWAYS" style="-fx-background-color: #FAFAFA; -fx-background-radius: 10; -fx-padding: 15;">
+        <children>
+            <Label style="-fx-text-fill: #37474F;" text="Message Log">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+            <TextArea fx:id="messageLogArea" editable="false" prefHeight="250.0" wrapText="true" VBox.vgrow="ALWAYS">
+                <font>
+                    <Font size="13.0" />
+                </font>
+            </TextArea>
+        </children>
+    </VBox>
+</VBox>

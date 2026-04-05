@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="650.0" prefWidth="1000.0" stylesheets="@/css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bagamoyo.bms.controller.SupervisorManagementController">
+
+    <children>
+        <!-- Header -->
+        <VBox alignment="CENTER" style="-fx-background-color: #43A047;" VBox.vgrow="NEVER">
+            <children>
+                <Label text="Supervisor Management" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label text="Bagamoyo District Council Management System" textFill="#C8E6C9">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+        </VBox>
+
+        <!-- Split Pane: Form on Left, TableView on Right -->
+        <SplitPane dividerPositions="0.35" VBox.vgrow="ALWAYS">
+            <items>
+                <!-- Left: Form Panel -->
+                <VBox spacing="15.0" style="-fx-background-color: #F5F5F5;">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                    <children>
+                        <Label text="Supervisor Details" textFill="#37474F">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+
+                        <!-- Username -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Username: *" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="usernameField" prefWidth="250.0" promptText="Enter username" style="-fx-font-size: 14;" />
+                            </children>
+                        </VBox>
+
+                        <!-- Password -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Password: *" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <PasswordField fx:id="passwordField" prefWidth="250.0" promptText="Enter password" style="-fx-font-size: 14;" />
+                            </children>
+                        </VBox>
+
+                        <!-- First Name -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="First Name: *" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="firstNameField" prefWidth="250.0" promptText="Enter first name" style="-fx-font-size: 14;" />
+                            </children>
+                        </VBox>
+
+                        <!-- Last Name -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Last Name: *" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="lastNameField" prefWidth="250.0" promptText="Enter last name" style="-fx-font-size: 14;" />
+                            </children>
+                        </VBox>
+
+                        <!-- Email -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Email: *" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="emailField" prefWidth="250.0" promptText="Enter email address" style="-fx-font-size: 14;" />
+                            </children>
+                        </VBox>
+
+                        <!-- Registration Date -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Registration Date:" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <DatePicker fx:id="datePicker" prefWidth="250.0" promptText="Select date (optional)" />
+                            </children>
+                        </VBox>
+
+                        <!-- Status Area -->
+                        <VBox spacing="5.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label text="Status:" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextArea fx:id="statusArea" editable="false" prefHeight="80.0" promptText="Operation status will appear here" wrapText="true" />
+                            </children>
+                        </VBox>
+
+                        <!-- Action Buttons -->
+                        <HBox spacing="10.0">
+                            <children>
+                                <JFXButton buttonType="RAISED" onAction="#handleCreateSupervisor" prefWidth="100.0" style="-fx-background-color: #43A047;" text="Add" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" onAction="#handleDeleteSupervisor" prefWidth="100.0" style="-fx-background-color: #F44336;" text="Delete" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" onAction="#handleViewSupervisor" prefWidth="100.0" style="-fx-background-color: #1E88E5;" text="View" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+
+                        <JFXButton buttonType="RAISED" onAction="#handleRefresh" prefWidth="250.0" style="-fx-background-color: #FF9800;" text="Refresh" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </VBox>
+
+                <!-- Right: TableView Panel -->
+                <VBox>
+                    <children>
+                        <!-- Table Header -->
+                        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #E8F5E9;">
+                            <padding>
+                                <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                            </padding>
+                            <children>
+                                <Label text="Supervisors List" textFill="#43A047">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+
+                        <!-- TableView -->
+                        <TableView fx:id="supervisorTable" prefHeight="500.0" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="usernameColumn" prefWidth="130.0" text="Username" />
+                                <TableColumn fx:id="firstNameColumn" prefWidth="140.0" text="First Name" />
+                                <TableColumn fx:id="lastNameColumn" prefWidth="140.0" text="Last Name" />
+                                <TableColumn fx:id="emailColumn" prefWidth="200.0" text="Email" />
+                                <TableColumn fx:id="dateColumn" prefWidth="130.0" text="Registration Date" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </VBox>
+            </items>
+        </SplitPane>
+    </children>
+
+</VBox>

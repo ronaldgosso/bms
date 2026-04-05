@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="700.0" stylesheets="@/css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bagamoyo.bms.controller.DeleteWorkerController">
+
+    <children>
+        <!-- Header -->
+        <VBox alignment="CENTER" style="-fx-background-color: #F44336;" VBox.vgrow="NEVER">
+            <children>
+                <Label text="Delete Worker Record" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label text="Bagamoyo District Council Management System" textFill="#FFCDD2">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+        </VBox>
+
+        <!-- Warning Message -->
+        <HBox alignment="CENTER" style="-fx-background-color: #FFEBEE;">
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+            <children>
+                <Label text="WARNING: This action cannot be undone!" textFill="#D32F2F">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+
+        <!-- Search Section -->
+        <VBox spacing="15.0" style="-fx-background-color: #FAFAFA;">
+            <padding>
+                <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+            </padding>
+            <children>
+                <Label text="Search Worker to Delete" textFill="#37474F">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <children>
+                        <Label text="Check No:" textFill="#37474F">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <JFXTextField fx:id="txtCheckNo" labelFloat="true" prefWidth="300.0" promptText="Enter Check Number" />
+                        <JFXButton fx:id="btnSearch" buttonType="RAISED" onAction="#handleSearch" prefWidth="100.0" style="-fx-background-color: #F44336;" text="Search" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <Separator />
+
+        <!-- Worker Details Display (Read-Only) -->
+        <VBox spacing="15.0" VBox.vgrow="ALWAYS">
+            <padding>
+                <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+            </padding>
+            <children>
+                <Label text="Worker Details (Read-Only)" textFill="#37474F">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                
+                <GridPane hgap="15.0" vgap="12.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="150.0" prefWidth="180.0" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" />
+                    </columnConstraints>
+
+                    <!-- Row 1: Worker Name (Check No is in search section) -->
+                    <Label text="Worker Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="txtWorkerName" editable="false" labelFloat="true" prefWidth="250.0" promptText="Full Name" style="-fx-opacity: 0.7;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                </GridPane>
+
+                <!-- Status Label -->
+                <Label fx:id="lblStatus" textFill="#757575">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+
+        <!-- Button Bar -->
+        <HBox alignment="CENTER_RIGHT" spacing="15.0" style="-fx-background-color: #F5F5F5;">
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+            <children>
+                <JFXButton fx:id="btnClear" buttonType="RAISED" onAction="#handleClear" prefWidth="120.0" style="-fx-background-color: #FF9800;" text="Clear" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnCancel" buttonType="RAISED" onAction="#handleCancel" prefWidth="120.0" style="-fx-background-color: #757575;" text="Cancel" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnDelete" buttonType="RAISED" onAction="#handleDelete" prefWidth="120.0" style="-fx-background-color: #D32F2F;" text="Delete" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </HBox>
+    </children>
+
+</VBox>

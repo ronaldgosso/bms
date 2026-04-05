@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="450.0" stylesheets="@/css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bagamoyo.bms.controller.SupervisorLoginController">
+    <children>
+        <!-- Background Gradient -->
+        <VBox layoutX="50.0" layoutY="50.0" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(135deg, #FB8C00 0%, #EF6C00 100%);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+
+        <!-- Login Card -->
+        <VBox alignment="CENTER" layoutX="25.0" layoutY="40.0" prefHeight="520.0" prefWidth="400.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 5);" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="40.0">
+            <children>
+                <!-- Logo and Title -->
+                <VBox alignment="CENTER" spacing="10.0">
+                    <padding>
+                        <Insets top="30.0" />
+                    </padding>
+                    <children>
+                        <ImageView fx:id="logView" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/img/baga.png" />
+                            </image>
+                        </ImageView>
+                        <Label style="-fx-text-fill: #37474F;" text="SUPERVISOR LOGIN">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label style="-fx-text-fill: #78909C;" text="Bagamoyo District Council">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+
+                <!-- Login Form -->
+                <VBox alignment="CENTER" spacing="20.0">
+                    <padding>
+                        <Insets left="40.0" right="40.0" top="30.0" />
+                    </padding>
+                    <children>
+                        <!-- Username Field -->
+                        <JFXTextField fx:id="user" labelFloat="true" prefHeight="45.0" promptText="Username" style="-jfx-unfocus-color: #FFE0B2; -jfx-focus-color: #FB8C00;">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </JFXTextField>
+
+                        <!-- Password Field -->
+                        <JFXPasswordField fx:id="pass" labelFloat="true" onAction="#handleLogin" prefHeight="45.0" promptText="Password" style="-jfx-unfocus-color: #FFE0B2; -jfx-focus-color: #FB8C00;">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </JFXPasswordField>
+
+                        <!-- Status Label -->
+                        <Label fx:id="statusLabel" alignment="CENTER" prefWidth="320.0" style="-fx-text-fill: #F44336;" textFill="#f44336">
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                        </Label>
+
+                        <!-- Connection Status -->
+                        <Label fx:id="isConnected" alignment="CENTER" prefWidth="320.0" style="-fx-text-fill: #4CAF50;" text="Ready" textFill="#4caf50">
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                        </Label>
+
+                        <!-- Login Button -->
+                        <JFXButton fx:id="loginButton" buttonType="RAISED" onAction="#handleLogin" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #FB8C00; -fx-background-radius: 10;" text="LOGIN" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </JFXButton>
+
+                        <!-- Navigation Buttons -->
+                        <HBox alignment="CENTER" spacing="15.0">
+                            <children>
+                                <!-- Back to Home Button -->
+                                <JFXButton buttonType="RAISED" onAction="#goToHome" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #ECEFF1; -fx-background-radius: 10;" text="Home" textFill="#37474F">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+
+                                <!-- Go to Admin Login -->
+                                <JFXButton buttonType="RAISED" onAction="#goToAdminLogin" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #ECEFF1; -fx-background-radius: 10;" text="Admin Login" textFill="#37474F">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </VBox>
+
+                <!-- Footer -->
+                <Label style="-fx-text-fill: #B0BEC5;" text="© 2026 Bagamoyo District Council">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

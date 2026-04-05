@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="850.0" stylesheets="@/css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bagamoyo.bms.controller.ChatClientController">
+
+    <!-- Top: Title Bar -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #1976D2;" BorderPane.alignment="CENTER">
+            <children>
+                <Label style="-fx-text-fill: white;" text="Chat Client">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="statusLabel" style="-fx-text-fill: #BBDEFB;" text="Disconnected">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+        </HBox>
+    </top>
+
+    <!-- Left: Connection and Login Panel -->
+    <left>
+        <VBox prefWidth="250.0" spacing="15.0" style="-fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+
+            <!-- Connection Section -->
+            <VBox spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15;">
+                <children>
+                    <Label style="-fx-text-fill: #37474F;" text="Connection">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="serverIpField" labelFloat="true" promptText="Server IP" text="localhost">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </JFXTextField>
+                    <JFXTextField fx:id="portField" labelFloat="true" promptText="Port" text="8888">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </JFXTextField>
+                    <JFXButton fx:id="connectButton" onAction="#handleConnect" prefWidth="180.0" style="-fx-background-color: #2196F3; -fx-background-radius: 8;" text="Connect" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </JFXButton>
+                </children>
+            </VBox>
+
+            <!-- Login Section -->
+            <VBox spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15;">
+                <children>
+                    <Label style="-fx-text-fill: #37474F;" text="Login">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="usernameField" labelFloat="true" promptText="Username">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </JFXTextField>
+                    <JFXButton fx:id="loginButton" onAction="#handleLogin" prefWidth="180.0" style="-fx-background-color: #4CAF50; -fx-background-radius: 8;" text="Login" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </JFXButton>
+                </children>
+            </VBox>
+
+            <!-- Users List Section -->
+            <VBox spacing="10.0" VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15;">
+                <children>
+                    <Label style="-fx-text-fill: #37474F;" text="Online Users">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                    <ListView fx:id="usersListView" VBox.vgrow="ALWAYS" />
+                </children>
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- Center: Chat Area -->
+    <center>
+        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+
+            <!-- Messages Display -->
+            <TextArea fx:id="messageArea" editable="false" prefHeight="400.0" wrapText="true" VBox.vgrow="ALWAYS">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </TextArea>
+
+            <!-- Message Input -->
+            <HBox alignment="CENTER" spacing="10.0">
+                <children>
+                    <JFXTextField fx:id="messageInputField" HBox.hgrow="ALWAYS" promptText="Type your message...">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </JFXTextField>
+                    <JFXButton fx:id="sendButton" onAction="#handleSend" style="-fx-background-color: #4CAF50; -fx-background-radius: 8;" text="Send" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </JFXButton>
+                </children>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="650.0" prefWidth="1000.0" stylesheets="@/css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bagamoyo.bms.controller.DepartmentManagementController">
+
+    <children>
+        <!-- Header -->
+        <VBox alignment="CENTER" style="-fx-background-color: #1E88E5;" VBox.vgrow="NEVER">
+            <children>
+                <Label text="Department Management" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label text="Bagamoyo District Council Management System" textFill="#BBDEFB">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+        </VBox>
+
+        <!-- Split Pane: Form on Left, TableView on Right -->
+        <SplitPane dividerPositions="0.35" VBox.vgrow="ALWAYS">
+            <items>
+                <!-- Left: Form Panel -->
+                <VBox spacing="15.0" style="-fx-background-color: #F5F5F5;">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                    <children>
+                        <Label text="Department Details" textFill="#37474F">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+
+                        <!-- Department Name -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Department Name: *" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="nameField" prefWidth="250.0" promptText="Enter department name" style="-fx-font-size: 14;" />
+                            </children>
+                        </VBox>
+
+                        <!-- Serial Number -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Serial Number: *" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="serialField" prefWidth="250.0" promptText="Enter serial number" style="-fx-font-size: 14;" />
+                            </children>
+                        </VBox>
+
+                        <!-- Supervisor -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Supervisor: *" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="supervisorField" prefWidth="250.0" promptText="Search supervisor..." style="-fx-font-size: 14;" />
+                            </children>
+                        </VBox>
+
+                        <!-- Creation Date -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Creation Date: *" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <DatePicker fx:id="datePicker" prefWidth="250.0" promptText="Select date" />
+                            </children>
+                        </VBox>
+
+                        <!-- Status Area -->
+                        <VBox spacing="5.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label text="Status:" textFill="#546E7A">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextArea fx:id="statusArea" editable="false" prefHeight="100.0" promptText="Operation status will appear here" wrapText="true" />
+                            </children>
+                        </VBox>
+
+                        <!-- Action Buttons -->
+                        <HBox spacing="10.0">
+                            <children>
+                                <JFXButton buttonType="RAISED" onAction="#handleCreateDepartment" prefWidth="100.0" style="-fx-background-color: #43A047;" text="Add" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" onAction="#handleDeleteDepartment" prefWidth="100.0" style="-fx-background-color: #F44336;" text="Delete" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" onAction="#handleViewDepartment" prefWidth="100.0" style="-fx-background-color: #1E88E5;" text="View" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+
+                        <JFXButton buttonType="RAISED" onAction="#handleRefresh" prefWidth="250.0" style="-fx-background-color: #FF9800;" text="Refresh" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </VBox>
+
+                <!-- Right: TableView Panel -->
+                <VBox>
+                    <children>
+                        <!-- Table Header -->
+                        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #E3F2FD;">
+                            <padding>
+                                <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                            </padding>
+                            <children>
+                                <Label text="Departments List" textFill="#1E88E5">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+
+                        <!-- TableView -->
+                        <TableView fx:id="departmentTable" prefHeight="500.0" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Department Name" />
+                                <TableColumn fx:id="serialColumn" prefWidth="120.0" text="Serial Number" />
+                                <TableColumn fx:id="supervisorColumn" prefWidth="180.0" text="Assigned Supervisor" />
+                                <TableColumn fx:id="dateColumn" prefWidth="130.0" text="Creation Date" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </VBox>
+            </items>
+        </SplitPane>
+    </children>
+
+</VBox>

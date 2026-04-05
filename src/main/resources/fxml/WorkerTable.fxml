@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1300.0" stylesheets="@/css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bagamoyo.bms.controller.WorkerTableController">
+
+    <!-- Top: Search and Filter Bar -->
+    <top>
+        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Header -->
+                <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #43A047;">
+                    <padding>
+                        <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                    </padding>
+                    <children>
+                        <Label text="Worker Records" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                        </Label>
+                        <Label text="Bagamoyo District Council Management System" textFill="#C8E6C9">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <HBox.margin>
+                            <Insets />
+                        </HBox.margin>
+                    </children>
+                </HBox>
+
+                <!-- Search Bar -->
+                <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #E8F5E9;">
+                    <padding>
+                        <Insets bottom="12.0" left="20.0" right="20.0" top="12.0" />
+                    </padding>
+                    <children>
+                        <Label text="Search:" textFill="#37474F">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtSearch" prefWidth="300.0" promptText="Search by name or check number..." style="-fx-font-size: 14;" />
+                        <JFXButton fx:id="btnSearch" buttonType="RAISED" onAction="#handleSearch" prefWidth="100.0" style="-fx-background-color: #43A047;" text="Search" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </HBox>
+
+                <!-- Filter Controls -->
+                <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #F5F5F5;">
+                    <padding>
+                        <Insets bottom="12.0" left="20.0" right="20.0" top="12.0" />
+                    </padding>
+                    <children>
+                        <Label text="Filters:" textFill="#37474F">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        
+                        <Label text="Sex:" textFill="#546E7A">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtFilterSex" prefWidth="100.0" promptText="Sex" />
+                        
+                        <Label text="Position:" textFill="#546E7A">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtFilterPosition" prefWidth="150.0" promptText="Position" />
+                        
+                        <Label text="Education:" textFill="#546E7A">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtFilterEducation" prefWidth="150.0" promptText="Education" />
+                        
+                        <Label text="Ward:" textFill="#546E7A">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtFilterWard" prefWidth="120.0" promptText="Ward" />
+                        
+                        <JFXButton fx:id="btnApplyFilters" buttonType="RAISED" onAction="#handleApplyFilters" prefWidth="110.0" style="-fx-background-color: #1E88E5;" text="Apply Filters" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </JFXButton>
+                        
+                        <JFXButton fx:id="btnClearFilters" buttonType="RAISED" onAction="#handleClearFilters" prefWidth="110.0" style="-fx-background-color: #FF9800;" text="Clear Filters" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+
+    <!-- Center: TableView -->
+    <center>
+        <TableView fx:id="workerTableView" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colCheckNo" prefWidth="100.0" text="Check No" />
+                <TableColumn fx:id="colFirstName" prefWidth="120.0" text="First Name" />
+                <TableColumn fx:id="colMiddleName" prefWidth="120.0" text="Middle Name" />
+                <TableColumn fx:id="colLastName" prefWidth="120.0" text="Last Name" />
+                <TableColumn fx:id="colSex" prefWidth="70.0" text="Sex" />
+                <TableColumn fx:id="colPosition" prefWidth="130.0" text="Position" />
+                <TableColumn fx:id="colSalary" prefWidth="100.0" text="Salary Level" />
+                <TableColumn fx:id="colTsd" prefWidth="100.0" text="TSD" />
+                <TableColumn fx:id="colDateOfBirth" prefWidth="110.0" text="Date of Birth" />
+                <TableColumn fx:id="colEmploymentDate" prefWidth="120.0" text="Employment Date" />
+                <TableColumn fx:id="colConfirmationDate" prefWidth="130.0" text="Confirmation Date" />
+                <TableColumn fx:id="colGrade" prefWidth="100.0" text="Grade Date" />
+                <TableColumn fx:id="colEducation" prefWidth="110.0" text="Education" />
+                <TableColumn fx:id="colInstitution" prefWidth="140.0" text="School Attended" />
+                <TableColumn fx:id="colGraduationYear" prefWidth="110.0" text="Graduation Year" />
+                <TableColumn fx:id="colCurrentWork" prefWidth="140.0" text="Current WorkStation" />
+                <TableColumn fx:id="colPreviousWork" prefWidth="140.0" text="Previous WorkStation" />
+                <TableColumn fx:id="colReligion" prefWidth="100.0" text="Religion" />
+                <TableColumn fx:id="colPlaceOfBirth" prefWidth="120.0" text="Place of Birth" />
+                <TableColumn fx:id="colPhoneNumber" prefWidth="120.0" text="Mobile" />
+                <TableColumn fx:id="colSubject1" prefWidth="110.0" text="First Subject" />
+                <TableColumn fx:id="colSubject2" prefWidth="120.0" text="Second Subject" />
+                <TableColumn fx:id="colWard" prefWidth="100.0" text="Ward (Kata)" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </center>
+
+    <!-- Bottom: Action Bar -->
+    <bottom>
+        <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #F5F5F5;">
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+            <children>
+                <!-- Total Records Label -->
+                <Label fx:id="lblTotalRecords" text="Total: 0 records" textFill="#37474F">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+
+                <HBox HBox.hgrow="ALWAYS" />
+
+                <!-- Export Section -->
+                <Label text="File Name:" textFill="#546E7A">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtSaveAs" prefWidth="180.0" promptText="Enter file name" />
+                <JFXButton fx:id="btnExportExcel" buttonType="RAISED" onAction="#handleExportExcel" prefWidth="130.0" style="-fx-background-color: #43A047;" text="Export to Excel" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </JFXButton>
+
+                <Label textFill="#BDBDBD" text="|" />
+
+                <!-- Refresh Button -->
+                <JFXButton fx:id="btnRefresh" buttonType="RAISED" onAction="#handleRefresh" prefWidth="100.0" style="-fx-background-color: #1E88E5;" text="Refresh" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </JFXButton>
+
+                <!-- Close Button -->
+                <JFXButton fx:id="btnClose" buttonType="RAISED" onAction="#handleClose" prefWidth="100.0" style="-fx-background-color: #757575;" text="Close" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>
